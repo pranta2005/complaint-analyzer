@@ -1,0 +1,48 @@
+// PASTE THIS INTO THE "RULES" TAB IN YOUR FIREBASE FIRESTORE CONSOLE
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // A helper function to check if we are still within the 30-day test window
+    function isTestMode() {
+      return request.time < timestamp.date(2026, 4, 29);
+    }
+
+    // BACKEND VALIDATION FOR REGISTRATION
+    match /students/{studentId} {
+      allow read: if isTestMode();
+      allow write: if isTestMode() &&
+        // Must have required fields with strict string types
+        request.resource.data.keys().hasAll(['name', 'roll', 'dept', 'pass']) &&
+        request.resource.data.name is string && request.resource.data.name.size() >= 2 && request.resource.data.name.size() <= 60 &&
+        request.resource.data.roll is string && request.resource.data.roll.size() > 0 &&
+        request.resource.data.dept is string && request.resource.data.dept.size() > 0 &&
+        request.resource.data.pass is string && request.resource.data.pass.size() >= 6;
+    }
+
+    match /admins/{adminId} {
+      allow read: if isTestMode();
+      allow write: if isTestMode() &&
+        request.resource.data.keys().hasAll(['name', 'id', 'domain', 'pass']) &&
+        request.resource.data.name is string && request.resource.data.name.size() >= 2 &&
+        request.resource.data.id is string && request.resource.data.id.size() >= 3 &&
+        request.resource.data.domain is string && request.resource.data.domain.size() > 0 &&
+        // We only save hashes in prod, but for your current app schema, we restrict the passed plain password length
+        request.resource.data.pass is string && request.resource.data.pass.size() >= 6;
+    }
+
+    // BACKEND VALIDATION FOR COMPLAINTS
+    match /complaints/{complaintId} {
+      allow read: if isTestMode();
+      allow write: if isTestMode() &&
+        request.resource.data.keys().hasAll(['student_name', 'roll_no', 'department', 'complaint_text', 'category', 'priority']) &&
+        request.resource.data.complaint_text is string &&
+        request.resource.data.complaint_text.size() >= 10 &&
+        request.resource.data.complaint_text.size() <= 1000;
+    }
+      match /{document=**} {
+      allow read, write: if isTestMode();
+    }
+  }
+}

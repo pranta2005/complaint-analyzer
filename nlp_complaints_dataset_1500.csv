@@ -1,0 +1,154 @@
+Original Text,Language,English Text,Category,Priority	Language	English Text	Category	Priority
+Exam delayed,Bengali,Exam delayed,Academics,Medium	Bengali	Queue is very long	Office	Low
+No transport available,Hindi,No transport available,Transport,Low	Bengali	Work is very slow	Office	Low
+Poor teaching,Bengali,Poor teaching,Academics,Medium	Bengali	Charges are too high	Transport	Medium
+No transport available,Bengali,No transport available,Transport,Medium	Bengali	Exam is delayed	Academics	Medium
+Faculty not available,English,Faculty not available,Academics,Low	Bengali	Library issue	Academics	Medium
+Office closed early,Bengali,Office closed early,Office,Low	Bengali	Teaching is poor	Academics	Medium
+Syllabus not completed,Bengali,Syllabus not completed,Academics,Low	Bengali	Fan is not working	Infrastructure	High
+Bus is late,English,Bus is late,Transport,Medium	Bengali	No water in hostel	Hostel	Medium
+Bus overcrowded,Hindi,Bus overcrowded,Transport,Medium	Bengali	Syllabus not completed	Academics	Low
+High charges,Bengali,High charges,Transport,Medium	Bengali	Bus is overcrowded	Transport	Low
+Bus overcrowded,Bengali,Bus overcrowded,Transport,Medium	Bengali	Room is dirty	Hostel	Low
+Bus is late,Bengali,Bus is late,Transport,Low	Bengali	No electricity in hostel	Hostel	High
+Hostel food is bad,Hindi,Hostel food is bad,Hostel,Medium	Bengali	Bus is late	Transport	Low
+Work is slow,Hindi,Work is slow,Office,Low	Bengali	Noise in hostel	Hostel	High
+Documents lost,English,Documents lost,Office,Low	Bengali	Electricity issue	Infrastructure	High
+Electricity issue in hostel,Bengali,Electricity issue in hostel,Hostel,High	Bengali	Internet is not working	Infrastructure	Low
+Staff is rude,Hindi,Staff is rude,Office,Low	Bengali	Staff behavior is bad	Office	Medium
+Noise in hostel,English,Noise in hostel,Hostel,Low	Bengali	Documents are lost	Office	Low
+Documents lost,English,Documents lost,Office,Medium	Bengali	WiFi is very slow	Infrastructure	Low
+WiFi is slow,English,WiFi is slow,Infrastructure,High	Bengali	Hostel food is bad	Hostel	Low
+Work is slow,Bengali,Work is slow,Office,Low	Bengali	Water problem	Infrastructure	Medium
+Library issue,English,Library issue,Academics,Medium	Bengali	Driving is unsafe	Transport	High
+No transport available,Bengali,No transport available,Transport,High	Bengali	Phone screen is frozen	Hardware	High
+Work is slow,Hindi,Work is slow,Office,High	Bengali	App is not installing	Software	Medium
+Syllabus not completed,Hindi,Syllabus not completed,Academics,High	Bengali	Keyboard spacebar is not working	Hardware	Low
+Office closed early,Bengali,Office closed early,Office,High	Bengali	Mouse wheel is broken	Hardware	Low
+वाईफाई धीमा है,Hindi,WiFi is slow,Infrastructure,Medium	Bengali	SSD upgrade is needed	Hardware	Medium
+इंटरनेट काम नहीं कर रहा,Hindi,Internet is not working,Infrastructure,Medium	Bengali	Problem in motherboard	Hardware	Critical
+Noise in hostel,Hindi,Noise in hostel,Hostel,Medium	Bengali	RAM is not working	Hardware	High
+Poor teaching,English,Poor teaching,Academics,Low	Bengali	Graphics card is overheating	Hardware	High
+বিদ্যুৎ সমস্যা,Bengali,Electricity issue,Infrastructure,Low	Bengali	Battery is draining very fast	Hardware	Medium
+High charges,Bengali,High charges,Transport,High	Bengali	Cannot read USB drive	Hardware	Medium
+Staff is rude,Bengali,Staff is rude,Office,High	Bengali	CD/DVD drive is stuck	Hardware	Low
+Hostel food is bad,Hindi,Hostel food is bad,Hostel,High	Bengali	Webcam is blurry	Hardware	Low
+Electricity issue in hostel,Bengali,Electricity issue in hostel,Hostel,Medium	Bengali	Speaker volume is too low	Hardware	Low
+Poor teaching,Hindi,Poor teaching,Academics,Medium	Bengali	Biometric scanner has failed	Hardware	High
+Poor teaching,Hindi,Poor teaching,Academics,High	Bengali	Cannot log into HR portal	Access	High
+High charges,Hindi,High charges,Transport,Medium	Bengali	Leave approval is pending	HR	Low
+ওয়াইফাই ধীর,Bengali,WiFi is slow,Infrastructure,Medium	Bengali	Medical claim is rejected	HR	High
+Unsafe driving,Bengali,Unsafe driving,Transport,Medium	Bengali	Office chair is broken	Facilities	Low
+Syllabus not completed,Bengali,Syllabus not completed,Academics,Medium	Bengali	AC is not working in server room	Infrastructure	Critical
+Water problem,English,Water problem,Infrastructure,Low	Bengali	Biometric attendance is not recorded	HR	Medium
+Electricity issue in hostel,Hindi,Electricity issue in hostel,Hostel,High	Bengali	ID card access denied	Access	High
+Faculty not available,Bengali,Faculty not available,Academics,Medium	Bengali	Office desk key is lost	Facilities	Medium
+Unsafe driving,English,Unsafe driving,Transport,Medium	Bengali	Echo in Zoom audio	Software	Medium
+बिजली की समस्या है,Hindi,Electricity issue,Infrastructure,Low	Bengali	Teams chat is not updating	Software	Medium
+High charges,Hindi,High charges,Transport,Low	Bengali	Cannot access Slack workspace	Software	High
+Syllabus not completed,Hindi,Syllabus not completed,Academics,Low	Bengali	Email inbox is full	Software	Medium
+ইন্টারনেট কাজ করছে না,Bengali,Internet is not working,Infrastructure,High	Bengali	Signature is not showing in email	Software	Low
+Room is dirty,English,Room is dirty,Hostel,Low	Bengali	Phishing email has been reported	Security	High
+Bus is late,Bengali,Bus is late,Transport,High	Bengali	Malware has been detected	Security	Critical
+Water problem in hostel,English,Water problem in hostel,Hostel,High	Bengali	Ransomware alert	Security	Critical
+Staff is rude,Hindi,Staff is rude,Office,High	Bengali	Data breach is suspected	Security	Critical
+Syllabus not completed,Bengali,Syllabus not completed,Academics,High	Bengali	Need guest WiFi password	Network	Low
+Syllabus not completed,English,Syllabus not completed,Academics,Low	Bengali	Bandwidth limit is exceeded	Network	Medium
+Poor teaching,Bengali,Poor teaching,Academics,Low	Bengali	Static IP request	Network	Low
+Room is dirty,English,Room is dirty,Hostel,Medium	Bengali	DNS is not working	Network	High
+Water problem in hostel,Bengali,Water problem in hostel,Hostel,Medium	Bengali	Proxy server error	Network	High
+Bus is late,English,Bus is late,Transport,High	Bengali	Router firmware update needed	Network	Medium
+Fan not working,English,Fan not working,Infrastructure,Medium	Bengali	ISP is down	Network	Critical
+Exam delayed,Hindi,Exam delayed,Academics,Low	Bengali	Cable is disconnected	Network	Medium
+পানির সমস্যা,Bengali,Water problem,Infrastructure,Medium	Bengali	Database timeout	Database	High
+Internet is not working,English,Internet is not working,Infrastructure,Low	Bengali	Query optimization is needed	Database	Medium
+Long queue,English,Long queue,Office,High	Bengali	MongoDB connection is lost	Database	Critical
+Long queue,Bengali,Long queue,Office,Medium	Bengali	AWS console is locked	Cloud	Critical
+Noise in hostel,Bengali,Noise in hostel,Hostel,Medium	Bengali	Azure VM is not starting	Cloud	High
+बिजली की समस्या है,Hindi,Electricity issue,Infrastructure,Medium	Bengali	GCP project quota reached	Cloud	Medium
+Library issue,Bengali,Library issue,Academics,High	Bengali	Pipeline deployment has failed	Infrastructure	High
+Hostel food is bad,Bengali,Hostel food is bad,Hostel,Medium	Bengali	SSL handshake has failed	Security	High
+পানির সমস্যা,Bengali,Water problem,Infrastructure,High	Bengali	Two-step verification code is not arriving	Security	High
+Long queue,Hindi,Long queue,Office,Medium	Bengali	Single Sign-On error	Access	High
+पंखा काम नहीं कर रहा,Hindi,Fan not working,Infrastructure,Low	Bengali	Admin rights requested	Access	Medium
+Faculty not available,Hindi,Faculty not available,Academics,High	Bengali	View-only access provided	Access	Low
+Faculty not available,Bengali,Faculty not available,Academics,Low	Bengali	Subscription auto-renewal failed	Billing	High
+Library issue,Hindi,Library issue,Academics,Medium	Bengali	Billing address update	Billing	Low
+Documents lost,English,Documents lost,Office,High	Bengali	Credit card has been declined	Billing	High
+Office closed early,Hindi,Office closed early,Office,High	Bengali	Need tax receipt	Billing	Low
+Library issue,Hindi,Library issue,Academics,High	Bengali	Promo code is invalid	Billing	Low
+Long queue,English,Long queue,Office,Medium	Bengali	Customer has changed mind	General	Low
+Faculty not available,Hindi,Faculty not available,Academics,Medium	Bengali	Wrong product shipped	General	High
+Documents lost,Bengali,Documents lost,Office,Low	Bengali	Missing parts in box	General	Medium
+पंखा काम नहीं कर रहा,Hindi,Fan not working,Infrastructure,High	Bengali	Order tracking is not updating	General	Medium
+Internet is not working,English,Internet is not working,Infrastructure,Medium	Bengali	Address is not found	General	High
+Unsafe driving,Bengali,Unsafe driving,Transport,Low	Bengali	Package marked delivered but missing	General	High
+Hostel food is bad,English,Hostel food is bad,Hostel,Medium	Bengali	App crashes on launch	Software	High
+पंखा काम नहीं कर रहा,Hindi,Fan not working,Infrastructure,Medium	Bengali	Stuck on loading screen	Software	Medium
+Water problem,English,Water problem,Infrastructure,Medium	Bengali	UI text is overlapping	Software	Low
+Electricity issue in hostel,English,Electricity issue in hostel,Hostel,High	Bengali	Button is unclickable	Software	High
+No transport available,Bengali,No transport available,Transport,Low	Bengali	Image is not rendering	Software	Medium
+Bus overcrowded,Bengali,Bus overcrowded,Transport,High	Bengali	Form validation error	Software	Medium
+Fan not working,English,Fan not working,Infrastructure,Low	Bengali	Offline mode is not working	Software	Medium
+Exam delayed,English,Exam delayed,Academics,Medium	Bengali	Push notifications are delayed	Software	Low
+Noise in hostel,Hindi,Noise in hostel,Hostel,Low	Bengali	GPS location is inaccurate	Mobile	High
+Electricity issue in hostel,English,Electricity issue in hostel,Hostel,Medium	Bengali	Biometric login has failed	Access	High
+Library issue,Bengali,Library issue,Academics,Medium	Bengali	Color contrast is poor in dark mode	Software	Low
+Work is slow,Bengali,Work is slow,Office,Medium	Bengali	Audio is not syncing	Software	Medium
+पानी की समस्या है,Hindi,Water problem,Infrastructure,Low	Bengali	Subtitles are missing	Software	Low
+पानी की समस्या है,Hindi,Water problem,Infrastructure,High	Bengali	Export to PDF failed	Software	Medium
+Library issue,Hindi,Library issue,Academics,Low	Bengali	Print preview is blank	Software	Low
+বিদ্যুৎ সমস্যা,Bengali,Electricity issue,Infrastructure,Medium	Bengali	Formatting lost after copy-paste	Software	Low
+Exam delayed,Bengali,Exam delayed,Academics,High	Bengali	Spell check is not working	Software	Low
+Hostel food is bad,English,Hostel food is bad,Hostel,High	Bengali	Internal marks not added to the result	Examination	High
+Faculty not available,Hindi,Faculty not available,Academics,Low	Bengali	Software not installed on lab computers	Academic	Medium
+Office closed early,English,Office closed early,Office,High	Bengali	Attendance percentage is showing wrong	Administration	Medium
+Fan not working,English,Fan not working,Infrastructure,High	Bengali	Scholarship verification is still pending	Finance	High
+Office closed early,English,Office closed early,Office,Medium	Bengali	College bus is not arriving on time	Transport	Medium
+Office closed early,Bengali,Office closed early,Office,Medium	Bengali	Canteen food quality is very poor	Facilities	High
+বিদ্যুৎ সমস্যা,Bengali,Electricity issue,Infrastructure,High	Bengali	Internship certificate is not uploading	Placement	Medium
+Noise in hostel,Bengali,Noise in hostel,Hostel,Low	Bengali	Need supplementary exam routine	Examination	Medium
+Noise in hostel,English,Noise in hostel,Hostel,Medium	Bengali	Forgot college email ID password	Access	High
+Room is dirty,Bengali,Room is dirty,Hostel,Medium	Bengali	Course curriculum cannot be downloaded	Academic	Low
+No transport available,Hindi,No transport available,Transport,Medium	Bengali	Sports room key is not available	Facilities	Low
+Bus overcrowded,English,Bus overcrowded,Transport,Medium	Bengali	Projector is not working in the classroom	Academic	Medium
+পানির সমস্যা,Bengali,Water problem,Infrastructure,Low	Bengali	Did not receive the fee payment receipt	Finance	High
+इंटरनेट काम नहीं कर रहा,Hindi,Internet is not working,Infrastructure,High	Bengali	Water problem in the hostel	Facilities	High
+Bus overcrowded,Bengali,Bus overcrowded,Transport,Low	Bengali	Offline class notice hasn't arrived yet	Administration	Low
+No transport available,English,No transport available,Transport,High	Bengali	Compiler giving error on lab PC	Academic	Medium
+No transport available,Hindi,No transport available,Transport,High	Bengali	CGPA calculated wrongly in grade card	Examination	High
+High charges,English,High charges,Transport,Medium	Bengali	How much to pay for backlog papers?	Finance	Medium
+WiFi is slow,English,WiFi is slow,Infrastructure,Medium	Bengali	Common room is very dirty	Facilities	Low
+Room is dirty,Bengali,Room is dirty,Hostel,Low	Bengali	Not getting due clearance certificate	Administration	High
+Documents lost,Hindi,Documents lost,Office,Low	Bengali	Teaching assistant is not answering the phone	Academic	Low
+बिजली की समस्या है,Hindi,Electricity issue,Infrastructure,High	Bengali	There is a bug in the coding assignment	Academic	Medium
+Unsafe driving,Hindi,Unsafe driving,Transport,Medium	Bengali	When is the last date to submit the thesis paper?	Academic	High
+No transport available,English,No transport available,Transport,Medium	Bengali	Guest lecture link is not working	Academic	Medium
+Work is slow,English,Work is slow,Office,High	Bengali	Cannot access the digital library	Access	Medium
+पानी की समस्या है,Hindi,Water problem,Infrastructure,Medium	Bengali	Lab report hasn't been checked yet	Academic	Low
+Documents lost,Hindi,Documents lost,Office,Medium	Bengali	No space available in the parking lot	Transport	Low
+Bus is late,Hindi,Bus is late,Transport,Medium	Bengali	Scholarship money not credited to bank	Finance	High
+ফ্যান কাজ করছে না,Bengali,Fan not working,Infrastructure,Low	Bengali	Where to get previous year question papers?	Academic	Medium
+Exam delayed,Hindi,Exam delayed,Academics,Medium	Bengali	Student portal is crashing repeatedly	Software	High
+Staff is rude,Bengali,Staff is rude,Office,Low	Bengali	Lab instrument is not working	Academic	Medium
+Syllabus not completed,English,Syllabus not completed,Academics,Medium	Bengali	Showing 'Absent' in result but I gave the exam	Examination	Critical
+Bus is late,Bengali,Bus is late,Transport,Medium	Bengali	Seminar registration is full	Academic	Low
+Long queue,Hindi,Long queue,Office,Low	Bengali	Cannot find a project partner	Academic	Low
+High charges,Hindi,High charges,Transport,High	Bengali	Need NOC for internship	Placement	Medium
+Electricity issue in hostel,Bengali,Electricity issue in hostel,Hostel,Low	Bengali	College WiFi password is not working	Network	Medium
+Exam delayed,Hindi,Exam delayed,Academics,High	Bengali	Need to change the food menu in the hostel	Facilities	Low
+वाईफाई धीमा है,Hindi,WiFi is slow,Infrastructure,High	Bengali	ID card chip is not working	Administration	High
+Noise in hostel,Bengali,Noise in hostel,Hostel,High	Bengali	Where to talk for gym membership?	Facilities	Low
+Work is slow,Hindi,Work is slow,Office,Medium	Bengali	Extra charges added to hostel fee	Finance	Medium
+Unsafe driving,Hindi,Unsafe driving,Transport,Low	Bengali	Not taking online payment in college canteen	Finance	Medium
+ওয়াইফাই ধীর,Bengali,WiFi is slow,Infrastructure,Low	Bengali	Money not recharging on student card	Finance	Medium
+Faculty not available,Bengali,Faculty not available,Academics,High	Bengali	Semester books haven't arrived in shops yet	Academic	Medium
+ওয়াইফাই ধীর,Bengali,WiFi is slow,Infrastructure,High	Bengali	Need a new roommate in the hostel	Facilities	Low
+Unsafe driving,English,Unsafe driving,Transport,Low	Bengali	Water leaking from AC in the lab	Facilities	Medium
+Hostel food is bad,Hindi,Hostel food is bad,Hostel,Low	Bengali	Need help for off-campus placement	Placement	Medium
+Water problem in hostel,Bengali,Water problem in hostel,Hostel,Low	Bengali	Why is the main gate of the college closed?	General	Medium
+Office closed early,English,Office closed early,Office,Low	Bengali	Did not receive the alumni meet invitation	Events	Medium
+Electricity issue in hostel,English,Electricity issue in hostel,Hostel,Low	Bengali	Submitted application for character certificate	Administration	Medium
+Water problem in hostel,English,Water problem in hostel,Hostel,Low	Bengali	Need the bonafide certificate today itself	Administration	High
+Internet is not working,English,Internet is not working,Infrastructure,High	Bengali	Need college stamp for education loan	Finance	High
+Staff is rude,English,Staff is rude,Office,High	Bengali	Semester fee has been deducted twice	Finance	Critical

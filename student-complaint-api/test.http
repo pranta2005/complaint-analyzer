@@ -1,0 +1,23 @@
+### Test Hindi
+POST http://localhost:5000/classify
+Content-Type: application/json
+
+{
+  "text": "वाईफाई काम नहीं कर रहा"
+}
+
+### Test Bengali
+POST http://localhost:5000/classify
+Content-Type: application/json
+
+{
+  "text": "হোস্টেলের খাবার ভালো না"
+}
+
+### Test English
+POST http://localhost:5000/classify
+Content-Type: application/json
+
+{
+  "text": "Professor is not teaching properly"
+}

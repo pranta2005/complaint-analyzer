@@ -1,0 +1,1428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complaint portal</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.0.6/purify.min.js"></script>
+  <script src="https://unpkg.com/zod@3.22.4/lib/index.umd.js"></script>
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg: #0d0f14;
+      --surface: #141720;
+      --surface2: #1c2030;
+      --border: rgba(255, 255, 255, 0.07);
+      --border2: rgba(255, 255, 255, 0.13);
+      --text: #e8eaf0;
+      --muted: #7a7f96;
+      --accent: #6c63ff;
+      --accent2: #a78bfa;
+      --green: #22c97a;
+      --amber: #f59e0b;
+      --red: #ef4444;
+      --blue: #3b82f6;
+      --font-head: 'Syne', sans-serif;
+      --font-body: 'DM Sans', sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      min-height: 100vh;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-6px)
+      }
+
+      to {
+        opacity: 1;
+        transform: none
+      }
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(24px)
+      }
+
+      to {
+        opacity: 1;
+        transform: none
+      }
+    }
+
+    #page-landing {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(108, 99, 255, 0.12) 0%, transparent 70%), var(--bg);
+    }
+
+    .land-logo {
+      font-family: var(--font-head);
+      font-weight: 800;
+      font-size: 1.6rem;
+      letter-spacing: -0.5px;
+      margin-bottom: 2.5rem;
+    }
+
+    .land-logo span {
+      color: var(--accent2);
+    }
+
+    .land-title {
+      font-family: var(--font-head);
+      font-size: clamp(2.2rem, 6vw, 3.8rem);
+      font-weight: 800;
+      letter-spacing: -2px;
+      line-height: 1.05;
+      text-align: center;
+      margin-bottom: 0.75rem;
+    }
+
+    .land-title em {
+      font-style: normal;
+      color: var(--accent2);
+    }
+
+    .land-sub {
+      color: var(--muted);
+      text-align: center;
+      font-size: 1rem;
+      margin-bottom: 3rem;
+    }
+
+    .role-cards {
+      display: flex;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .role-card {
+      background: var(--surface);
+      border: 1px solid var(--border2);
+      border-radius: 20px;
+      padding: 2rem 2.5rem;
+      cursor: pointer;
+      width: 220px;
+      text-align: center;
+      transition: border-color 0.2s, transform 0.2s;
+      animation: slideUp 0.5s ease both;
+    }
+
+    .role-card:nth-child(2) {
+      animation-delay: 0.1s;
+    }
+
+    .role-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-4px);
+    }
+
+    .role-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .role-label {
+      font-family: var(--font-head);
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+    }
+
+    .role-desc {
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    #page-login {
+      min-height: 100vh;
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+      background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(108, 99, 255, 0.1) 0%, transparent 70%), var(--bg);
+    }
+
+    .login-box {
+      background: var(--surface);
+      border: 1px solid var(--border2);
+      border-radius: 20px;
+      padding: 2.5rem;
+      width: 100%;
+      max-width: 440px;
+      animation: slideUp 0.4s ease;
+    }
+
+    .login-back {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--muted);
+      font-size: 0.82rem;
+      cursor: pointer;
+      margin-bottom: 1.5rem;
+    }
+
+    .login-back:hover {
+      color: var(--text);
+    }
+
+    .login-role-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.78rem;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 1.25rem;
+    }
+
+    .login-role-badge.student {
+      background: rgba(108, 99, 255, 0.15);
+      color: var(--accent2);
+    }
+
+    .login-role-badge.admin {
+      background: rgba(239, 68, 68, 0.12);
+      color: #f87171;
+    }
+
+    .section-toggle {
+      display: flex;
+      border: 1px solid var(--border2);
+      border-radius: 8px;
+      margin-bottom: 1.5rem;
+      overflow: hidden;
+    }
+
+    .section-toggle button {
+      flex: 1;
+      padding: 9px;
+      border: none;
+      cursor: pointer;
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      font-weight: 500;
+      background: transparent;
+      color: var(--muted);
+      transition: all 0.2s;
+    }
+
+    .section-toggle button.active {
+      background: var(--surface2);
+      color: var(--text);
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 1rem;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .form-group.full {
+      grid-column: 1/-1;
+    }
+
+    label {
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+    }
+
+    input,
+    select,
+    textarea {
+      background: var(--surface2);
+      border: 1px solid var(--border2);
+      border-radius: 8px;
+      padding: 10px 14px;
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      outline: none;
+      transition: border-color 0.2s;
+      width: 100%;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--accent);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+      line-height: 1.6;
+    }
+
+    select option {
+      background: var(--surface2);
+    }
+
+    .login-hint {
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-bottom: 1.25rem;
+      padding: 10px 14px;
+      background: var(--surface2);
+      border-radius: 8px;
+      border-left: 3px solid var(--accent);
+      line-height: 1.7;
+    }
+
+    .err-msg {
+      font-size: 0.8rem;
+      color: var(--red);
+      margin-bottom: 0.75rem;
+      display: none;
+      animation: fadeIn 0.2s;
+    }
+
+    .btn-primary {
+      width: 100%;
+      padding: 13px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      font-family: var(--font-head);
+      font-size: 1rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #fff;
+      transition: opacity 0.2s, transform 0.1s;
+      margin-top: 0.25rem;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.88;
+      transform: translateY(-1px);
+    }
+
+    .register-link {
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-top: 1.25rem;
+    }
+
+    .register-link a {
+      color: var(--accent2);
+      cursor: pointer;
+    }
+
+    .register-link a:hover {
+      text-decoration: underline;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.9rem 2rem;
+      border-bottom: 1px solid var(--border);
+      background: rgba(13, 15, 20, 0.97);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-family: var(--font-head);
+      font-weight: 800;
+      font-size: 1.2rem;
+      letter-spacing: -0.5px;
+    }
+
+    .logo span {
+      color: var(--accent2);
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-user {
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    .nav-user strong {
+      color: var(--text);
+    }
+
+    .btn-logout {
+      padding: 5px 14px;
+      border-radius: 6px;
+      border: 1px solid var(--border2);
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      font-size: 0.78rem;
+      font-family: var(--font-body);
+      transition: all 0.2s;
+    }
+
+    .btn-logout:hover {
+      color: var(--text);
+      background: var(--surface2);
+    }
+
+    .nav-tabs {
+      display: flex;
+      gap: 4px;
+    }
+
+    .tab-btn {
+      padding: 6px 16px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 500;
+      background: transparent;
+      color: var(--muted);
+      transition: all 0.2s;
+    }
+
+    .tab-btn.active {
+      background: var(--surface2);
+      color: var(--text);
+    }
+
+    .tab-btn:hover:not(.active) {
+      color: var(--text);
+    }
+
+    #page-app {
+      display: none;
+    }
+
+    .view {
+      display: none;
+    }
+
+    .view.active {
+      display: block;
+      animation: fadeIn 0.3s;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero h1 {
+      font-family: var(--font-head);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 800;
+      letter-spacing: -1px;
+      line-height: 1.1;
+    }
+
+    .hero h1 em {
+      font-style: normal;
+      color: var(--accent2);
+    }
+
+    .hero p {
+      color: var(--muted);
+      margin-top: 0.6rem;
+      font-size: 0.95rem;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .card-title {
+      font-family: var(--font-head);
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      color: var(--text);
+    }
+
+    .nlp-preview {
+      background: var(--surface2);
+      border: 1px solid var(--border2);
+      border-radius: 10px;
+      padding: 1rem 1.25rem;
+      margin-top: 0.75rem;
+      display: none;
+      animation: fadeIn 0.3s;
+    }
+
+    .nlp-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 0.5rem;
+    }
+
+    .nlp-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: var(--muted);
+      min-width: 70px;
+    }
+
+    .badge {
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      display: inline-block;
+    }
+
+    .badge-infra {
+      background: #1e3a5f;
+      color: #60a5fa;
+    }
+
+    .badge-hostel {
+      background: #1a3a2a;
+      color: #34d399;
+    }
+
+    .badge-academic {
+      background: #2e1a5f;
+      color: #a78bfa;
+    }
+
+    .badge-canteen {
+      background: #3a2a0a;
+      color: #fbbf24;
+    }
+
+    .badge-office {
+      background: #2a1a1a;
+      color: #f87171;
+    }
+
+    .badge-high {
+      background: rgba(239, 68, 68, 0.15);
+      color: var(--red);
+    }
+
+    .badge-medium {
+      background: rgba(245, 158, 11, 0.15);
+      color: var(--amber);
+    }
+
+    .badge-low {
+      background: rgba(34, 201, 122, 0.15);
+      color: var(--green);
+    }
+
+    .badge-pending {
+      background: rgba(245, 158, 11, 0.15);
+      color: var(--amber);
+    }
+
+    .badge-progress {
+      background: rgba(59, 130, 246, 0.15);
+      color: var(--blue);
+    }
+
+    .badge-resolved {
+      background: rgba(34, 201, 122, 0.15);
+      color: var(--green);
+    }
+
+
+
+    .btn-submit {
+      width: 100%;
+      padding: 13px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      font-family: var(--font-head);
+      font-size: 1rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #fff;
+      transition: opacity 0.2s, transform 0.1s;
+      margin-top: 0.5rem;
+    }
+
+    .btn-submit:hover:not(:disabled) {
+      opacity: 0.88;
+      transform: translateY(-1px);
+    }
+
+    .btn-submit:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .success-msg {
+      display: none;
+      text-align: center;
+      padding: 2rem;
+      border: 1px dashed var(--green);
+      border-radius: 12px;
+      background: rgba(34, 201, 122, 0.05);
+      margin-top: 1rem;
+      animation: fadeIn 0.4s;
+    }
+
+    .success-msg h3 {
+      font-family: var(--font-head);
+      color: var(--green);
+      font-size: 1.2rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .success-msg p {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .stat-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.1rem 1.25rem;
+    }
+
+    .stat-num {
+      font-family: var(--font-head);
+      font-size: 2rem;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .stat-lbl {
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+
+    .filter-bar {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 1.25rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-bar select {
+      width: auto;
+      padding: 7px 12px;
+      font-size: 0.82rem;
+      border-radius: 8px;
+    }
+
+    .filter-bar button {
+      padding: 7px 16px;
+      border-radius: 8px;
+      border: 1px solid var(--border2);
+      background: var(--surface2);
+      color: var(--text);
+      cursor: pointer;
+      font-size: 0.82rem;
+      font-family: var(--font-body);
+    }
+
+    .complaint-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+      margin-bottom: 0.9rem;
+    }
+
+    .cc-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 0.6rem;
+    }
+
+    .cc-meta {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .cc-id {
+      font-size: 0.72rem;
+      color: var(--muted);
+      font-family: monospace;
+    }
+
+    .cc-text {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.55;
+      margin-bottom: 0.7rem;
+    }
+
+    .cc-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .cc-info {
+      font-size: 0.75rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .status-select {
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 0.78rem;
+      border: 1px solid var(--border2);
+      background: var(--surface2);
+      color: var(--text);
+      cursor: pointer;
+      font-family: var(--font-body);
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 3rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .analyzing {
+      color: var(--muted);
+      font-size: 0.8rem;
+      padding: 0.5rem 0;
+    }
+
+    @media(max-width:600px) {
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-row {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      nav {
+        padding: 0.75rem 1rem;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .container {
+        padding: 1.5rem 1rem;
+      }
+
+      .role-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .role-card {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+
+    button {
+      transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+    }
+
+    .btn-primary:hover,
+    .btn-submit:hover:not(:disabled) {
+      opacity: 1 !important;
+      transform: translateY(-3px) scale(1.02) !important;
+      box-shadow: 0 8px 20px rgba(108, 99, 255, 0.4), 0 0 10px rgba(167, 139, 250, 0.3) !important;
+    }
+
+    .btn-primary:active,
+    .btn-submit:active:not(:disabled) {
+      transform: translateY(1px) scale(0.98) !important;
+      box-shadow: 0 4px 10px rgba(108, 99, 255, 0.2) !important;
+    }
+
+    .btn-logout:hover,
+    .tab-btn:hover:not(.active),
+    .section-toggle button:hover:not(.active),
+    .filter-bar button:hover {
+      color: #fff !important;
+      background: rgba(108, 99, 255, 0.15) !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+      border-color: rgba(108, 99, 255, 0.5) !important;
+    }
+
+    .role-card {
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    }
+
+    .role-card:hover {
+      border-color: var(--accent2) !important;
+      transform: translateY(-8px) scale(1.03) !important;
+      box-shadow: 0 15px 30px rgba(108, 99, 255, 0.15), 0 0 15px rgba(167, 139, 250, 0.1) !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="page-landing">
+    <div class="land-logo">Complaint <span>portal</span></div>
+    <h1 class="land-title">your<em>voice.</em></h1>
+    <div class="role-cards">
+      <div class="role-card" onclick="openLogin('student')">
+        <div class="role-icon">🎓</div>
+        <div class="role-label">Student</div>
+        <div class="role-desc">Submit complaints and track their status in real time</div>
+      </div>
+      <div class="role-card" onclick="openLogin('admin')">
+        <div class="role-icon">🛡️</div>
+        <div class="role-label">Admin</div>
+        <div class="role-desc">Review all complaints, update statuses, manage grievances</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page-login">
+    <div class="login-box">
+      <div class="login-back" onclick="goLanding()">← Back</div>
+      <div id="login-role-badge" class="login-role-badge student">🎓 Student Portal</div>
+      <div id="auth-toggle" class="section-toggle">
+        <button class="active" onclick="switchAuth('login',this)">Sign In</button>
+        <button onclick="switchAuth('register',this)">Register</button>
+      </div>
+      <div id="auth-login">
+        <div class="form-group">
+          <label id="login-id-label">Roll Number</label>
+          <input type="text" id="login-id" placeholder="Enter Roll Number" onkeydown="if(event.key==='Enter')doLogin()">
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" id="login-pass" placeholder="••••••••" onkeydown="if(event.key==='Enter')doLogin()">
+        </div>
+        <div class="login-hint" id="login-hint"></div>
+        <div class="err-msg" id="login-err">Incorrect credentials. Please try again.</div>
+        <button class="btn-primary" onclick="doLogin()">Sign In →</button>
+        <div class="register-link" id="reg-link">New here? <a
+            onclick="switchAuth('register', document.querySelectorAll('#auth-toggle button')[1])">Create an account</a>
+        </div>
+      </div>
+      <div id="auth-register" style="display:none">
+        <div class="form-grid" id="student-reg-fields">
+          <div class="form-group"><label>Full Name</label><input type="text" id="reg-name" placeholder="Rahul Das">
+          </div>
+          <div class="form-group"><label>Roll Number</label><input type="text" id="reg-roll"
+              placeholder="Enter Roll Number">
+          </div>
+          <div class="form-group full">
+            <label>Department</label>
+            <select id="reg-dept">
+              <option value="">— Select —</option>
+              <option>Computer Science &amp; Engineering</option>
+              <option>Electrical Engineering</option>
+              <option>Mechanical Engineering</option>
+              <option>Civil Engineering</option>
+              <option>Electronics &amp; Communication</option>
+              <option>Management</option>
+              <option>Others</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-grid" id="admin-reg-fields" style="display:none;">
+          <div class="form-group"><label>Full Name</label><input type="text" id="admin-name" placeholder="Dr. S. Kumar">
+          </div>
+          <div class="form-group"><label>Staff ID</label><input type="text" id="admin-id" placeholder="STF-001"></div>
+          <div class="form-group full">
+            <label>Authority Domain</label>
+            <select id="admin-domain">
+              <option value="">— Select Domain —</option>
+              <option>Estate Office / Maintenance Dept</option>
+              <option>Chief Warden</option>
+              <option>Dean of Academics</option>
+              <option>Canteen Committee</option>
+              <option>General Administration</option>
+            </select>
+          </div>
+          <div class="form-group full"><label>Admin Invite Code</label><input type="password" id="admin-invite"
+              placeholder="Secret Code (ADMIN-2026)"></div>
+        </div>
+        <div class="form-grid" style="margin-top:1rem;">
+          <div class="form-group"><label>Password</label><input type="password" id="reg-pass"
+              placeholder="Min 6 characters"></div>
+          <div class="form-group"><label>Confirm Password</label><input type="password" id="reg-pass2"
+              placeholder="Repeat password"></div>
+        </div>
+        <div class="err-msg" id="reg-err" style="margin-top: 5px;"></div>
+        <button class="btn-primary" id="btn-register" onclick="doRegister()">Create Account →</button>
+        <div class="register-link">Already registered? <a
+            onclick="switchAuth('login', document.querySelectorAll('#auth-toggle button')[0])">Sign in</a></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="page-app">
+    <nav>
+      <div class="logo">Campus<span>Voice</span></div>
+      <div class="nav-tabs" id="nav-tabs"></div>
+      <div class="nav-right">
+        <div class="nav-user"><strong id="nav-username"></strong><span id="nav-role-tag" style="margin-left:5px"></span>
+        </div>
+        <button class="btn-logout" onclick="doLogout()">Sign out</button>
+      </div>
+    </nav>
+
+    <div id="view-submit" class="view">
+      <div class="container">
+        <div class="hero">
+          <h1>Your voice <em>matters.</em></h1>
+          <p>Submit complaints in English, Bengali, or mixed language.</p>
+        </div>
+        <div class="card">
+          <div class="card-title">Your Complaint</div>
+          <div class="form-grid" style="margin-bottom:1rem">
+            <div class="form-group"><label>Name</label><input type="text" id="student_name" readonly
+                style="opacity:0.55;cursor:default"></div>
+            <div class="form-group"><label>Roll Number</label><input type="text" id="roll_no" readonly
+                style="opacity:0.55;cursor:default"></div>
+            <div class="form-group full"><label>Department</label><input type="text" id="department" readonly
+                style="opacity:0.55;cursor:default"></div>
+            <div class="form-group full"><label>Describe your issue</label><textarea id="complaint_text"
+                placeholder="e.g. Classroom 3102-এর fan কাজ করছে না, খুব গরম লাগছে…" oninput="onTextInput()"></textarea>
+            </div>
+          </div>
+          <div id="nlp-preview" class="nlp-preview">
+            <div id="analyzing-msg" class="analyzing">Analyzing…</div>
+            <div id="nlp-result" style="display:none">
+              <div class="nlp-row"><span class="nlp-label">Category</span><span id="p-category"
+                  class="badge"></span><span class="nlp-label" style="margin-left:8px">Priority</span><span
+                  id="p-priority" class="badge"></span></div>
+              <div class="nlp-row"><span class="nlp-label">Authority</span><span id="p-authority"
+                  style="font-size:0.8rem;color:var(--text)"></span></div>
+            </div>
+          </div>
+          <button id="submit-btn" class="submit-btn" onclick="submitComplaint()">Submit Complaint →</button>
+          <div id="success-msg" class="success-msg">
+            <h3>✓ Complaint Submitted</h3>
+            <p id="success-detail"></p>
+          </div>
+        </div>
+      </div>
+
+      <div id="view-my" class="view">
+        <div class="container">
+          <div class="hero" style="text-align:left;margin-bottom:1.5rem;">
+            <h1 style="font-size:1.8rem;">My <em>Complaints</em></h1>
+            <p>Track complaints you have submitted and their current status.</p>
+          </div>
+          <div id="my-complaints-list"></div>
+        </div>
+      </div>
+
+      <div id="view-dashboard" class="view">
+        <div class="container">
+          <div class="hero" style="text-align:left;margin-bottom:1.5rem;">
+            <h1 style="font-size:1.8rem;">Admin <em>Dashboard</em></h1>
+          </div>
+          <div class="stats-row">
+            <div class="stat-card">
+              <div class="stat-num" id="stat-total">0</div>
+              <div class="stat-lbl">Total</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num" style="color:var(--red)" id="stat-high">0</div>
+              <div class="stat-lbl">High Priority</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num" style="color:var(--amber)" id="stat-pending">0</div>
+              <div class="stat-lbl">Pending</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num" style="color:var(--green)" id="stat-resolved">0</div>
+              <div class="stat-lbl">Resolved</div>
+            </div>
+          </div>
+          <div class="filter-bar">
+            <select id="f-category" onchange="renderDashboard()">
+              <option value="">All categories</option>
+              <option>Infrastructure</option>
+              <option>Hostel</option>
+              <option>Academic</option>
+              <option>Canteen</option>
+              <option>Office / Admin</option>
+            </select>
+            <select id="f-priority" onchange="renderDashboard()">
+              <option value="">All priorities</option>
+              <option>High</option>
+              <option>Medium</option>
+              <option>Low</option>
+            </select>
+            <select id="f-status" onchange="renderDashboard()">
+              <option value="">All statuses</option>
+              <option>Pending</option>
+              <option>In Progress</option>
+              <option>Resolved</option>
+            </select>
+            <button onclick="renderDashboard()">↻ Refresh</button>
+          </div>
+          <div id="complaints-list"></div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+      import { getFirestore, collection, addDoc, getDocs, doc, updateDoc, query, where, orderBy } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-firestore.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyDVAWIhqG4SsOfFoYvlaax8JTsicWR1edc",
+        authDomain: "campusvoice-b0163.firebaseapp.com",
+        projectId: "campusvoice-b0163",
+        storageBucket: "campusvoice-b0163.firebasestorage.app",
+        messagingSenderId: "507216795652",
+        appId: "1:507216795652:web:15be00e95f552a9f9e7d51",
+        measurementId: "G-VP64S0TFY9"
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+
+      const ADMIN = { username: 'admin', pass: 'admin@123' };
+      let currentUser = null;
+      const catClass = { 'Infrastructure': 'badge-infra', 'Hostel': 'badge-hostel', 'Academic': 'badge-academic', 'Canteen': 'badge-canteen', 'Office / Admin': 'badge-office' };
+
+      let loginRole = 'student';
+
+      window.goLanding = function () {
+        document.getElementById('page-landing').style.display = 'flex';
+        document.getElementById('page-login').style.display = 'none';
+        document.getElementById('page-app').style.display = 'none';
+      }
+
+      window.openLogin = function (role) {
+        loginRole = role;
+        document.getElementById('page-landing').style.display = 'none';
+        document.getElementById('page-login').style.display = 'flex';
+        document.getElementById('login-err').style.display = 'none';
+        document.getElementById('reg-err').style.display = 'none';
+        document.getElementById('login-id').value = '';
+        document.getElementById('login-pass').value = '';
+
+        const badge = document.getElementById('login-role-badge');
+        const toggle = document.getElementById('auth-toggle');
+        const hint = document.getElementById('login-hint');
+        const regLink = document.getElementById('reg-link');
+
+        if (role === 'admin') {
+          badge.textContent = '🛡️ Admin Portal'; badge.className = 'login-role-badge admin';
+          toggle.style.display = 'flex'; regLink.style.display = 'block';
+          document.getElementById('login-id-label').textContent = 'Staff ID';
+          document.getElementById('login-id').placeholder = 'STF-001';
+          hint.innerHTML = '<strong>Admin Portal:</strong> Use your Staff ID to log in.';
+          document.getElementById('student-reg-fields').style.display = 'none';
+          document.getElementById('admin-reg-fields').style.display = 'grid';
+          window.switchAuth('login', document.querySelector('#auth-toggle button'));
+        } else {
+          badge.textContent = '🎓 Student Portal'; badge.className = 'login-role-badge student';
+          toggle.style.display = 'flex'; regLink.style.display = 'block';
+          document.getElementById('login-id-label').textContent = 'Roll Number';
+          document.getElementById('login-id').placeholder = 'Enter Roll Number';
+          hint.innerHTML = '<strong>Note:</strong> Create an account to log in securely via Firestore.';
+          document.getElementById('student-reg-fields').style.display = 'grid';
+          document.getElementById('admin-reg-fields').style.display = 'none';
+          window.switchAuth('login', document.querySelector('#auth-toggle button'));
+        }
+      }
+
+      window.switchAuth = function (mode, btn) {
+        document.querySelectorAll('#auth-toggle button').forEach(b => b.classList.remove('active'));
+        if (btn) btn.classList.add('active');
+        document.getElementById('auth-login').style.display = mode === 'login' ? 'block' : 'none';
+        document.getElementById('auth-register').style.display = mode === 'register' ? 'block' : 'none';
+        document.getElementById('reg-link').style.display = mode === 'login' ? 'block' : 'none';
+      }
+
+      window.openApp = function (user) {
+        currentUser = user;
+        document.getElementById('page-login').style.display = 'none';
+        document.getElementById('page-app').style.display = 'block';
+        document.getElementById('nav-username').textContent = user.name;
+        document.getElementById('nav-role-tag').textContent = user.role === 'admin' ? '(Admin)' : '(Student)';
+
+        const tabs = document.getElementById('nav-tabs');
+        if (user.role === 'student') {
+          tabs.innerHTML = `
+      <button class="tab-btn active" onclick="showView('submit',this)">Submit</button>
+      <button class="tab-btn" onclick="showView('my',this)">My Complaints</button>`;
+          document.getElementById('student_name').value = user.name;
+          document.getElementById('roll_no').value = user.roll;
+          document.getElementById('department').value = user.dept;
+          window.showView('submit', tabs.firstElementChild);
+        } else {
+          tabs.innerHTML = `<button class="tab-btn active" onclick="showView('dashboard',this)">Dashboard</button>`;
+          window.showView('dashboard', tabs.firstElementChild);
+        }
+      }
+
+      window.doLogout = function () { currentUser = null; window.goLanding(); }
+
+      window.showView = async function (name, btn) {
+        document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.getElementById('view-' + name).classList.add('active');
+        if (btn) btn.classList.add('active');
+
+        if (name === 'my') await window.renderMyComplaints();
+        if (name === 'dashboard') await window.renderDashboard();
+      }
+
+      const z = window.Zod;
+      const sanitize = (str) => DOMPurify.sanitize ? DOMPurify.sanitize(str.trim()) : str.trim();
+
+      const studentSchema = z.object({
+        name: z.string().min(2, "Name must be at least 2 characters."),
+        roll: z.string().min(1, "Roll number is required."),
+        dept: z.string().min(1, "Please select a department."),
+        pass: z.string().min(6, "Password must be at least 6 characters.")
+      });
+
+      const adminSchema = z.object({
+        name: z.string().min(2, "Name must be at least 2 characters."),
+        id: z.string().toUpperCase().min(3, "Staff ID must be at least 3 characters."),
+        domain: z.string().min(1, "Please select an authority domain."),
+        invite: z.literal("CV-ADMIN-2026", { errorMap: () => ({ message: "Invalid Admin Invite Code." }) }),
+        pass: z.string().min(6, "Password must be at least 6 characters.")
+      });
+
+      const complaintSchema = z.object({
+        text: z.string().min(10, "Complaint must be at least 10 characters.").max(1000, "Complaint text too long.")
+      });
+
+      window.doLogin = async function () {
+        const id = sanitize(document.getElementById('login-id').value);
+        const pass = sanitize(document.getElementById('login-pass').value);
+        const err = document.getElementById('login-err');
+        err.style.display = 'none';
+
+        try {
+          const collPrefix = loginRole === 'admin' ? 'admins' : 'students';
+          const idField = loginRole === 'admin' ? 'id' : 'roll';
+
+          if (loginRole === 'admin' && id === ADMIN.username && pass === ADMIN.pass) {
+            window.openApp({ role: 'admin', name: 'Administrator', roll: '', dept: '' });
+            return;
+          }
+
+          const q = query(collection(db, collPrefix), where(idField, "==", id), where("pass", "==", pass));
+          const qs = await getDocs(q);
+
+          if (!qs.empty) {
+            const u = qs.docs[0].data();
+            window.openApp({ role: loginRole, name: u.name, roll: u.roll || u.id, dept: u.dept || u.domain });
+          } else {
+            err.textContent = "Incorrect credentials. Please try again.";
+            err.style.display = 'block';
+          }
+        } catch (error) {
+          console.error("Login error:", error);
+          err.textContent = "Database error. Check console.";
+          err.style.display = 'block';
+        }
+      }
+
+      window.doRegister = async function () {
+        const err = document.getElementById('reg-err');
+        err.style.display = 'none';
+
+        try {
+          const pass = sanitize(document.getElementById('reg-pass').value);
+          const pass2 = sanitize(document.getElementById('reg-pass2').value);
+          if (pass !== pass2) throw new Error("Passwords do not match.");
+
+          if (loginRole === 'student') {
+            const data = studentSchema.parse({
+              name: sanitize(document.getElementById('reg-name').value),
+              roll: sanitize(document.getElementById('reg-roll').value),
+              dept: sanitize(document.getElementById('reg-dept').value),
+              pass: pass
+            });
+
+            const q = query(collection(db, "students"), where("roll", "==", data.roll));
+            if (!(await getDocs(q)).empty) throw new Error("Roll number already registered.");
+
+            await addDoc(collection(db, "students"), data);
+            window.openApp({ role: 'student', name: data.name, roll: data.roll, dept: data.dept });
+
+          } else {
+            const data = adminSchema.parse({
+              name: sanitize(document.getElementById('admin-name').value),
+              id: sanitize(document.getElementById('admin-id').value),
+              domain: sanitize(document.getElementById('admin-domain').value),
+              invite: sanitize(document.getElementById('admin-invite').value),
+              pass: pass
+            });
+
+            const q = query(collection(db, "admins"), where("id", "==", data.id));
+            if (!(await getDocs(q)).empty) throw new Error("Staff ID already registered.");
+
+            await addDoc(collection(db, "admins"), data);
+            window.openApp({ role: 'admin', name: data.name, roll: data.id, dept: data.domain });
+          }
+
+        } catch (error) {
+          if (error.errors) err.textContent = error.errors[0].message;
+          else err.textContent = error.message;
+          err.style.display = 'block';
+        }
+      }
+      async function classifyComplaint(text) {
+        const res = await fetch("http://127.0.0.1:5000/classify", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ text: text })
+        });
+
+        const data = await res.json();
+
+        return {
+          category: data.category,
+          priority: data.priority,
+          authority: data.authority,
+          translated_text: data.translated || text  
+        };
+      }
+
+      let debounce, lastResult = null;
+      window.onTextInput = function () {
+        clearTimeout(debounce); lastResult = null;
+        const text = document.getElementById('complaint_text').value.trim();
+        const preview = document.getElementById('nlp-preview');
+        if (text.length < 10) { preview.style.display = 'none'; return; }
+        preview.style.display = 'block';
+        document.getElementById('analyzing-msg').style.display = 'block';
+        document.getElementById('nlp-result').style.display = 'none';
+        debounce = setTimeout(async () => {
+          try { const r = await classifyComplaint(text); lastResult = r; showPreview(r); }
+          catch (e) { document.getElementById('analyzing-msg').textContent = 'Will classify on submit (Ensure backend API is running).'; }
+        }, 700);
+      }
+
+      function showPreview(r) {
+        document.getElementById('analyzing-msg').style.display = 'none';
+        document.getElementById('nlp-result').style.display = 'block';
+        const c = document.getElementById('p-category'); c.textContent = r.category; c.className = 'badge ' + (catClass[r.category] || 'badge-office');
+        const p = document.getElementById('p-priority'); p.textContent = r.priority; p.className = 'badge badge-' + r.priority.toLowerCase();
+        document.getElementById('p-authority').textContent = r.authority;
+      }
+
+      window.submitComplaint = async function () {
+        const btn = document.getElementById('submit-btn');
+
+        try {
+          const validData = complaintSchema.parse({ text: sanitize(document.getElementById('complaint_text').value) });
+          const text = validData.text;
+
+          btn.disabled = true; btn.textContent = 'Processing...';
+          const result = lastResult || await classifyComplaint(text);
+
+          const newComplaint = {
+            student_name: currentUser.name,
+            roll_no: currentUser.roll,
+            department: currentUser.dept,
+            complaint_text: text,
+            translated_text: result.translated_text,
+            category: result.category,
+            priority: result.priority,
+            authority: result.authority,
+            keywords: [],
+            reason: result.reason || '',
+            status: 'Pending',
+            submitted_at: new Date().toLocaleString('en-IN', { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' }),
+            timestamp: Date.now()
+          };
+
+          await addDoc(collection(db, "complaints"), newComplaint);
+
+          document.getElementById('success-msg').style.display = 'block';
+          document.getElementById('success-detail').textContent = `Complaint forwarded to ${newComplaint.authority} as ${newComplaint.priority} priority under "${newComplaint.category}".`;
+          document.getElementById('complaint_text').value = '';
+          document.getElementById('nlp-preview').style.display = 'none';
+          lastResult = null;
+        } catch (e) {
+          if (e.errors) {
+            alert('Validation Error: ' + e.errors[0].message);
+          } else {
+            alert('Error connecting to backend or database. Ensure API Key is correct.');
+            console.error(e);
+          }
+        }
+        btn.disabled = false; btn.textContent = 'Submit Complaint →';
+      }
+
+      window.renderMyComplaints = async function () {
+        const el = document.getElementById('my-complaints-list');
+        el.innerHTML = '<div class="empty-state">Loading your complaints...</div>';
+
+        try {
+          const q = query(collection(db, "complaints"), where("roll_no", "==", currentUser.roll));
+          const querySnapshot = await getDocs(q);
+
+          const mine = [];
+          querySnapshot.forEach((doc) => { mine.push({ id: doc.id, ...doc.data() }); });
+          mine.sort((a, b) => b.timestamp - a.timestamp);
+
+          if (!mine.length) { el.innerHTML = '<div class="empty-state">You have not submitted any complaints yet.</div>'; return; }
+
+          el.innerHTML = mine.map(c => {
+            const st = c.status === 'Resolved' ? 'badge-resolved' : c.status === 'In Progress' ? 'badge-progress' : 'badge-pending';
+            return `<div class="complaint-card">
+        <div class="cc-header">
+          <div class="cc-meta">
+            <span class="badge ${catClass[c.category] || 'badge-office'}">${c.category}</span>
+            <span class="badge badge-${c.priority.toLowerCase()}">${c.priority}</span>
+            <span class="badge ${st}">${c.status}</span>
+          </div>
+          <span class="cc-id">#${c.id.substring(0, 6)} · ${c.submitted_at}</span>
+        </div>
+        <div class="cc-text">${c.complaint_text}</div>
+        ${c.reason ? `<div style="font-size:0.75rem;color:var(--accent2);margin-bottom:0.5rem;font-style:italic">AI: ${c.reason}</div>` : ''}
+        <div class="cc-info">→ ${c.authority}</div>
+      </div>`;
+          }).join('');
+        } catch (error) {
+          el.innerHTML = '<div class="empty-state">Error loading from database.</div>';
+          console.error(error);
+        }
+      }
+
+      window.renderDashboard = async function () {
+        const el = document.getElementById('complaints-list');
+        el.innerHTML = '<div class="empty-state">Loading database...</div>';
+
+        try {
+          const querySnapshot = await getDocs(collection(db, "complaints"));
+          let complaints = [];
+          querySnapshot.forEach((doc) => { complaints.push({ id: doc.id, ...doc.data() }); });
+          complaints.sort((a, b) => b.timestamp - a.timestamp);
+
+          const catF = document.getElementById('f-category')?.value || '';
+          const priF = document.getElementById('f-priority')?.value || '';
+          const stF = document.getElementById('f-status')?.value || '';
+          const filtered = complaints.filter(c => (!catF || c.category === catF) && (!priF || c.priority === priF) && (!stF || c.status === stF));
+
+          document.getElementById('stat-total').textContent = complaints.length;
+          document.getElementById('stat-high').textContent = complaints.filter(c => c.priority === 'High').length;
+          document.getElementById('stat-pending').textContent = complaints.filter(c => c.status === 'Pending').length;
+          document.getElementById('stat-resolved').textContent = complaints.filter(c => c.status === 'Resolved').length;
+
+          if (!filtered.length) { el.innerHTML = '<div class="empty-state">No complaints found.</div>'; return; }
+
+          el.innerHTML = filtered.map(c => {
+            const st = c.status === 'Resolved' ? 'badge-resolved' : c.status === 'In Progress' ? 'badge-progress' : 'badge-pending';
+            return `<div class="complaint-card">
+        <div class="cc-header">
+          <div class="cc-meta">
+            <span class="badge ${catClass[c.category] || 'badge-office'}">${c.category}</span>
+            <span class="badge badge-${c.priority.toLowerCase()}">${c.priority}</span>
+            <span class="badge ${st}">${c.status}</span>
+          </div>
+          <span class="cc-id">#${c.id.substring(0, 6)} · ${c.submitted_at}</span>
+        </div>
+        <div class="cc-text">${c.translated_text || c.complaint_text}</div>
+        ${(c.translated_text && c.translated_text !== c.complaint_text) ? `<div style="font-size:0.8rem;color:var(--muted);margin-bottom:0.6rem;border-left:2px solid var(--border2);padding-left:8px;"><em>Original: ${c.complaint_text}</em></div>` : ''}
+        ${c.reason ? `<div style="font-size:0.75rem;color:var(--accent2);margin-bottom:0.6rem;font-style:italic">AI: ${c.reason}</div>` : ''}
+        <div class="cc-footer">
+          <div class="cc-info">
+            <strong style="color:var(--text)">${c.student_name}</strong> · ${c.roll_no} · ${c.department}<br>
+            → ${c.authority}
+          </div>
+          <select class="status-select" onchange="updateStatus('${c.id}',this.value)">
+            <option ${c.status === 'Pending' ? 'selected' : ''}>Pending</option>
+            <option ${c.status === 'In Progress' ? 'selected' : ''}>In Progress</option>
+            <option ${c.status === 'Resolved' ? 'selected' : ''}>Resolved</option>
+          </select>
+        </div>
+      </div>`;
+          }).join('');
+        } catch (error) {
+          el.innerHTML = '<div class="empty-state">Error loading from database.</div>';
+          console.error(error);
+        }
+      }
+
+      window.updateStatus = async function (id, status) {
+        try {
+          const complaintRef = doc(db, "complaints", id);
+          await updateDoc(complaintRef, { status: status });
+          window.renderDashboard();
+        } catch (error) {
+          alert("Error updating status");
+          console.error(error);
+        }
+      }
+
+      window.goLanding();
+    </script>
+</body>
+
+</html>
