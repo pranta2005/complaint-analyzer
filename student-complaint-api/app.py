@@ -1,4 +1,5 @@
 import os
+import re
 import torch
 import joblib
 import gc
@@ -68,13 +69,32 @@ def translate_to_english(text):
         print("Translation Error:", e)
         return text
 
+def clean_text(text: str) -> str:
+    """Lowercase and remove special chars to match training preprocessing."""
+    text = text.lower()
+    text = re.sub(r'[^a-z0-9\s]', ' ', text)
+    text = re.sub(r'\s+', ' ', text).strip()
+    return text
+
+
 def get_authority(category):
     mapping = {
-        'Infrastructure': 'Estate Office / Maintenance Dept',
-        'Hostel': 'Chief Warden',
-        'Academic': 'Dean of Academics',
-        'Canteen': 'Canteen Committee',
-        'Office / Admin': 'General Administration'
+        'Academics':        'Dean of Academics',
+        'Infrastructure':   'Estate Office / Maintenance Dept',
+        'Hostel':           'Chief Warden',
+        'Administration':   'General Administration',
+        'Finance':          'Finance Office',
+        'Software':         'IT Department',
+        'Hardware':         'IT Department',
+        'Network':          'IT Department',
+        'Extracurricular':  'Student Activities Committee',
+        'Placement':        'Placement Cell',
+        'Library':          'Library Committee',
+        'Transport':        'Transport Office',
+        'Facilities':       'Facilities Management',
+        'Examination':      'Examination Cell',
+        'Security':         'Security Department',
+        'General':          'Student Welfare Office',
     }
     return mapping.get(category, 'General Administration')
 
@@ -86,9 +106,10 @@ def classify():
 
     text = data['text']
     translated = translate_to_english(text)
+    cleaned = clean_text(translated)  # match training preprocessing
 
-    text_vector = vectorizer.transform([translated])
-    
+    text_vector = vectorizer.transform([cleaned])
+
     category = category_model.predict(text_vector)[0]
     priority = priority_model.predict(text_vector)[0]
     authority = get_authority(category)

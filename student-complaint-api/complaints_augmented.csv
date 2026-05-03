@@ -1,0 +1,799 @@
+text	category	priority
+Professor does not teach well	Academics	High
+Hostel food is not good	Hostel	Medium
+Books not available in library	Library	Medium
+WiFi is not working	Infrastructure	High
+Fees are too high	Finance	Medium
+Water problem in campus	Infrastructure	High
+Electricity goes off frequently	Infrastructure	High
+Canteen is not clean	Hostel	Medium
+Exam schedule not announced	Academics	High
+Classroom facilities are poor	Infrastructure	Medium
+Lab equipment not working	Academics	Medium
+Bus does not come on time	Transport	Medium
+Had a fight with roommate	Hostel	Low
+Placement cell is not working	Placement	High
+Toilets are not clean	Infrastructure	High
+Sports facility not available	Extracurricular	Low
+No medical facility on campus	Facilities	High
+Project guide not available	Academics	High
+Insects in hostel room	Hostel	Medium
+No parking space on campus	Infrastructure	Low
+No ATM on campus	Infrastructure	Low
+Computer lab not available	Academics	Medium
+AC not working in hostel	Infrastructure	Medium
+Guest lecture not organized	Academics	Low
+No support for internship	Placement	High
+Club activities not happening	Extracurricular	Low
+Tutorial classes not useful	Academics	Medium
+Study material not provided	Academics	Medium
+Professor behavior is bad	Academics	High
+No water in washroom	Infrastructure	High
+Gym facility not available	Extracurricular	Low
+Mess timing is inconvenient	Hostel	Medium
+Classroom lighting is poor	Infrastructure	Medium
+Course is not updated	Academics	High
+Online portal has issues	Administration	High
+Bus frequency is less	Transport	Medium
+Hostel is too hot	Hostel	Medium
+No heater in hostel room	Hostel	Medium
+Doctor does not visit regularly	Facilities	High
+Exam center is far	Academics	Medium
+Revaluation process is slow	Academics	High
+Study tours not organized	Academics	Low
+Canteen food is expensive	Finance	Medium
+Duplicate ID card issued	Administration	Medium
+Workshop training not practical	Academics	Medium
+Semester fee deadline is short	Finance	High
+Sports kit not provided	Extracurricular	Low
+Low participation in events	Extracurricular	Low
+No CCTV on campus	Infrastructure	High
+No night canteen available	Hostel	Low
+Too much noise in hostel	Hostel	Medium
+Bus driver drives rashly	Transport	High
+Attendance system has errors	Academics	High
+Projector not working in class	Infrastructure	Medium
+Water cooler not working	Infrastructure	Medium
+Stationery shop is expensive	Finance	Low
+Mobile network is weak	Infrastructure	Medium
+No locker facility in hostel	Hostel	Low
+Furniture broken in room	Hostel	Medium
+Cannot complain to warden	Hostel	Medium
+Medical leave process is hard	Administration	High
+Extra classes not informed	Academics	Medium
+Syllabus is too lengthy	Academics	Medium
+Teacher does not explain well	Academics	High
+Room allocation is unfair	Hostel	Medium
+Photocopy shop is far	Infrastructure	Low
+Bus route has changed	Transport	Medium
+Lunch break is too short	Administration	Low
+Class timetable not shared	Academics	High
+No one available in admin office	Administration	Medium
+Certificate verification takes long	Administration	Medium
+Complaint box not checked	Administration	Medium
+No air conditioning in class	Infrastructure	Low
+Cleaning staff is irregular	Infrastructure	Medium
+Mock tests not conducted	Academics	Medium
+No career counseling provided	Placement	Medium
+Research funding not available	Academics	High
+PhD guide not assigned	Academics	High
+No chance to attend conferences	Academics	Medium
+No laptop charging point	Infrastructure	Medium
+Guests not allowed in hostel	Hostel	Low
+Hostel closed during vacation	Hostel	Medium
+Night out application rejected	Hostel	Low
+Less vegetarian options in mess	Hostel	Low
+Non-veg food quality is poor	Hostel	Low
+Mess menu is repetitive	Hostel	Low
+Fruits not available in mess	Hostel	Low
+No juice corner available	Infrastructure	Low
+Books not available for borrowing	Library	Medium
+No access to e-resources	Library	Medium
+Shortage of study rooms	Library	Medium
+No group discussion room	Infrastructure	Low
+Difficult to book auditorium	Administration	Low
+Less budget for cultural events	Extracurricular	Low
+NSS activities not happening	Extracurricular	Low
+NCC training not organized	Extracurricular	Low
+Cultural programs not held	Extracurricular	Low
+Technical fest not organized	Extracurricular	Low
+No coding club available	Extracurricular	Low
+Debate competition not held	Extracurricular	Low
+Quiz competition not organized	Extracurricular	Low
+No music room available	Extracurricular	Low
+No dance room available	Extracurricular	Low
+No art club available	Extracurricular	Low
+Media club not active	Extracurricular	Low
+No startup support provided	Placement	Medium
+No innovation lab available	Academics	Medium
+No makers space available	Academics	Low
+No 3D printer available	Academics	Low
+No IoT lab available	Academics	Medium
+No AI ML course offered	Academics	High
+Cloud computing not taught	Academics	Medium
+No data science course	Academics	High
+Blockchain not in syllabus	Academics	Low
+Digital marketing not taught	Academics	Low
+Soft skills training missing	Academics	Medium
+No communication skills course	Academics	Medium
+Aptitude training not available	Placement	Medium
+Interview preparation not done	Placement	High
+Resume building not taught	Placement	Medium
+No LinkedIn profile guidance	Placement	Low
+No job portal access	Placement	Medium
+No info on off-campus placements	Placement	Medium
+Alumni network not active	Placement	Medium
+No peer to peer learning	Academics	Low
+Fight in team project	Academics	Medium
+Bias in viva examination	Academics	High
+Internal marks are unfair	Academics	High
+Cheating not handled properly	Academics	High
+No plagiarism checker available	Academics	Medium
+Open book exam was confusing	Academics	Low
+Take home assignment is hard	Academics	Low
+Problem in online examination	Academics	High
+Proctoring software has issues	Academics	Medium
+Grading system is unfair	Academics	Medium
+CGPA calculation has error	Academics	High
+Difficult to change elective	Academics	High
+Re-exam date not announced	Academics	High
+Supplementary exam fee is high	Academics	High
+Improvement exam not allowed	Academics	Medium
+Grace marks not given	Academics	Medium
+Medical certificate not accepted	Administration	High
+प्रोफेसर अच्छे से नहीं पढ़ाते	Academics	High
+हॉस्टल का खाना अच्छा नहीं है	Hostel	Medium
+लाइब्रेरी में किताबें नहीं हैं	Library	Medium
+वाईफाई काम नहीं कर रहा	Infrastructure	High
+फीस बहुत ज्यादा है	Finance	Medium
+पानी की समस्या है	Infrastructure	High
+बिजली बार बार जाती है	Infrastructure	High
+कैंटीन साफ नहीं है	Hostel	Medium
+परीक्षा का समय सारणी नहीं मिली	Academics	High
+क्लासरूम की सुविधा खराब है	Infrastructure	Medium
+लैब उपकरण काम नहीं कर रहे	Academics	Medium
+बस समय पर नहीं आती	Transport	Medium
+रूममेट से झगड़ा हो गया	Hostel	Low
+प्लेसमेंट सेल काम नहीं कर रही	Placement	High
+मार्कशीट में गलती है	Academics	High
+शौचालय साफ नहीं है	Infrastructure	High
+खेल सुविधा उपलब्ध नहीं है	Extracurricular	Low
+कैंपस में मेडिकल सुविधा नहीं है	Facilities	High
+रजिस्ट्रेशन में समस्या है	Administration	Medium
+হোস্টেলের খাবার ভালো না	Hostel	Medium
+ওয়াইফাই কাজ করছে না	Infrastructure	High
+পরীক্ষার সময়সূচি দেওয়া হয়নি	Academics	High
+বাস সময়মতো আসে না	Transport	Medium
+অধ্যাপক ঠিকমতো পড়ান না	Academics	High
+ডাক্তার নিয়মিত আসেন না	Facilities	High
+प्रोफेसर क्लास नहीं लेते	Academics	High
+हॉस्टल का खाना खराब है	Hostel	Medium
+लाइब्रेरी में किताबें नहीं मिलती	Library	Medium
+वाईफाई काम नहीं करता	Infrastructure	High
+फीस बहुत महंगी है	Finance	Medium
+कैंटीन में सफाई नहीं है	Hostel	Medium
+परीक्षा का शेड्यूल देर से मिला	Academics	High
+क्लासरूम में पंखे खराब हैं	Infrastructure	Medium
+प्रैक्टिकल लैब में उपकरण पुराने हैं	Academics	Medium
+प्लेसमेंट सेल मदद नहीं करता	Placement	High
+टॉयलेट साफ नहीं हैं	Infrastructure	High
+स्पोर्ट्स सुविधाएं कम हैं	Extracurricular	Low
+मेडिकल सुविधा नहीं है	Facilities	High
+रजिस्ट्रेशन प्रक्रिया जटिल है	Administration	Medium
+असाइनमेंट की डेडलाइन कम है	Academics	Medium
+प्रोजेक्ट गाइड नहीं मिल रहा	Academics	High
+हॉस्टल में कीड़े हैं	Hostel	Medium
+पार्किंग की जगह नहीं है	Infrastructure	Low
+एटीएम कैंपस में नहीं है	Infrastructure	Low
+कंप्यूटर लैब में सिस्टम धीमे हैं	Academics	Medium
+सेमिनार हॉल में एसी नहीं चलता	Infrastructure	Medium
+गेस्ट लेक्चर नहीं होते	Academics	Low
+इंटर्नशिप के लिए सपोर्ट नहीं मिलता	Placement	High
+हॉस्टल की फीस बढ़ गई	Finance	Medium
+क्लब एक्टिविटीज कम हैं	Extracurricular	Low
+सिक्योरिटी गार्ड बदतमीज है	Administration	Medium
+लाइब्रेरी जल्दी बंद हो जाती है	Library	Medium
+ट्यूटोरियल क्लास नहीं होती	Academics	Medium
+रिजल्ट देर से आता है	Academics	High
+स्टडी मटेरियल नहीं दिया जाता	Academics	Medium
+प्रोफेसर का व्यवहार खराब है	Academics	High
+वॉशरूम में पानी नहीं आता	Infrastructure	High
+जिम की सुविधा नहीं है	Extracurricular	Low
+मेस का टाइमिंग ठीक नहीं है	Hostel	Medium
+क्लासरूम में लाइट कम है	Infrastructure	Medium
+कोर्स अपडेटेड नहीं है	Academics	High
+ऑनलाइन पोर्टल काम नहीं करता	Administration	High
+बस की फ्रीक्वेंसी कम है	Transport	Medium
+हॉस्टल में गर्मी बहुत है	Hostel	Medium
+सर्दी में हीटर नहीं है	Hostel	Medium
+डॉक्टर कैंपस में नहीं आते	Facilities	High
+एग्जाम सेंटर दूर है	Academics	Medium
+रीवैल्यूएशन में बहुत समय लगता है	Academics	High
+स्टडी टूर नहीं होते	Academics	Low
+कैंटीन का खाना महंगा है	Finance	Medium
+डुप्लीकेट आईकार्ड नहीं बनता	Administration	Medium
+वर्कशॉप ट्रेनिंग नहीं होती	Academics	Medium
+सेमेस्टर फीस बहुत है	Finance	High
+बोनाफाइड सर्टिफिकेट देर से मिलता है	Administration	Medium
+स्पोर्ट्स किट नहीं मिलती	Extracurricular	Low
+इवेंट्स में पार्टिसिपेशन कम है	Extracurricular	Low
+कैंपस में सीसीटीवी नहीं है	Infrastructure	High
+गेट पास की समस्या है	Administration	Medium
+नाइट कैंटीन नहीं है	Hostel	Low
+हॉस्टल में शोर बहुत होता है	Hostel	Medium
+बस ड्राइवर तेज चलाता है	Transport	High
+अटेंडेंस गलत मार्क होती है	Academics	High
+प्रोजेक्टर काम नहीं करता	Infrastructure	Medium
+वॉटर कूलर खराब है	Infrastructure	Medium
+स्टेशनरी शॉप महंगी है	Finance	Low
+मोबाइल नेटवर्क नहीं आता	Infrastructure	Medium
+लॉकर की सुविधा नहीं है	Hostel	Low
+रूम में फर्नीचर टूटा है	Hostel	Medium
+वार्डन से बात नहीं होती	Hostel	Medium
+मेडिकल लीव अप्रूव नहीं होती	Administration	High
+एक्स्ट्रा क्लास नहीं लगती	Academics	Medium
+सिलेबस बहुत ज्यादा है	Academics	Medium
+टीचर समझाते नहीं हैं	Academics	High
+रूम अलॉटमेंट में दिक्कत है	Hostel	Medium
+फोटोकॉपी शॉप बंद रहती है	Infrastructure	Low
+बस रूट बदल दिया गया	Transport	Medium
+लंच ब्रेक कम है	Administration	Low
+क्लास टाइमटेबल क्लैश करता है	Academics	High
+डिपार्टमेंट ऑफिस में कोई नहीं मिलता	Administration	Medium
+सर्टिफिकेट वेरिफिकेशन में देरी	Administration	Medium
+कंप्लेंट बॉक्स चेक नहीं होता	Administration	Medium
+एयर कंडीशनर नहीं है	Infrastructure	Low
+क्लीनिंग स्टाफ नहीं आता	Infrastructure	Medium
+डस्टबिन नहीं रखे हैं	Infrastructure	Low
+मॉक टेस्ट नहीं होते	Academics	Medium
+करियर काउंसलिंग नहीं मिलती	Placement	Medium
+रिसर्च फंडिंग नहीं मिलती	Academics	High
+पीएचडी गाइड नहीं मिलता	Academics	High
+पब्लिकेशन सपोर्ट नहीं है	Academics	Medium
+कॉन्फ्रेंस अटेंड करने का मौका नहीं	Academics	Medium
+लैपटॉप चार्जिंग पॉइंट नहीं है	Infrastructure	Medium
+हॉस्टल में गेस्ट नहीं आ सकते	Hostel	Low
+वैकेशन में हॉस्टल बंद होता है	Hostel	Medium
+नाइट आउट अप्रूवल मुश्किल है	Hostel	Low
+मेस में वेज ऑप्शन कम है	Hostel	Low
+नॉनवेज का खाना अच्छा नहीं	Hostel	Low
+मेस का मेन्यू बदलता नहीं	Hostel	Low
+फ्रूट्स नहीं मिलते मेस में	Hostel	Low
+जूस कॉर्नर नहीं है	Infrastructure	Low
+बुक बैंक से किताबें नहीं मिलती	Library	Medium
+लाइब्रेरी में शोर होता है	Library	Medium
+ई-रिसोर्सेज एक्सेस नहीं है	Library	Medium
+जर्नल सब्सक्रिप्शन नहीं है	Library	Medium
+स्टडी रूम की कमी है	Library	Medium
+ग्रुप डिस्कशन रूम नहीं है	Infrastructure	Low
+ऑडिटोरियम बुक करना मुश्किल है	Administration	Low
+फेस्ट का बजट कम मिलता है	Extracurricular	Low
+एनएसएस एक्टिविटी नहीं होती	Extracurricular	Low
+एनसीसी ट्रेनिंग अच्छी नहीं है	Extracurricular	Low
+कल्चरल प्रोग्राम कम होते हैं	Extracurricular	Low
+टेक्निकल फेस्ट नहीं होता	Extracurricular	Low
+कोडिंग क्लब नहीं है	Extracurricular	Low
+डिबेट कंपीटीशन नहीं होते	Extracurricular	Low
+क्विज कंपीटीशन नहीं होते	Extracurricular	Low
+म्यूजिक रूम नहीं है	Extracurricular	Low
+डांस रूम की सुविधा नहीं है	Extracurricular	Low
+आर्ट क्लब नहीं है	Extracurricular	Low
+फोटोग्राफी क्लब नहीं है	Extracurricular	Low
+ड्रामा सोसाइटी नहीं है	Extracurricular	Low
+मीडिया क्लब एक्टिव नहीं है	Extracurricular	Low
+एंटरप्रेन्योरशिप सेल नहीं है	Placement	Medium
+स्टार्टअप सपोर्ट नहीं मिलता	Placement	Medium
+इनोवेशन लैब नहीं है	Academics	Medium
+मेकर्स स्पेस नहीं है	Academics	Low
+थ्रीडी प्रिंटर नहीं है	Academics	Low
+आईओटी लैब नहीं है	Academics	Medium
+एआई एमएल कोर्स नहीं है	Academics	High
+साइबर सिक्योरिटी लैब नहीं है	Academics	Medium
+क्लाउड कंप्यूटिंग नहीं सिखाते	Academics	Medium
+डेटा साइंस कोर्स नहीं है	Academics	High
+डिजिटल मार्केटिंग नहीं सिखाते	Academics	Low
+सॉफ्ट स्किल्स ट्रेनिंग नहीं होती	Academics	Medium
+कम्युनिकेशन क्लास नहीं है	Academics	Medium
+एप्टीट्यूड ट्रेनिंग नहीं होती	Placement	Medium
+इंटरव्यू प्रेप नहीं कराते	Placement	High
+रिज्यूम बिल्डिंग सेशन नहीं होते	Placement	Medium
+लिंक्डइन प्रोफाइल हेल्प नहीं मिलती	Placement	Low
+जॉब पोर्टल एक्सेस नहीं है	Placement	Medium
+ऑफकैंपस ड्राइव की जानकारी नहीं	Placement	Medium
+एल्युमनी नेटवर्क कमजोर है	Placement	Medium
+मेंटरशिप प्रोग्राम नहीं है	Academics	Medium
+पीयर टू पीयर लर्निंग नहीं है	Academics	Low
+टीम प्रोजेक्ट में झगड़ा	Academics	Medium
+वाइवा में पक्षपात होता है	Academics	High
+इंटर्नल मार्क्स फेयर नहीं हैं	Academics	High
+असाइनमेंट कॉपी होता है	Academics	Medium
+चीटिंग पकड़ी नहीं जाती	Academics	High
+प्लेजियरिज्म चेकर नहीं है	Academics	Medium
+ओपन बुक एग्जाम नहीं होते	Academics	Low
+टेक होम असाइनमेंट नहीं देते	Academics	Low
+ऑनलाइन एग्जाम में प्रॉब्लम है	Academics	High
+प्रॉक्टरिंग सॉफ्टवेयर खराब है	Academics	Medium
+ग्रेडिंग सिस्टम क्लियर नहीं है	Academics	Medium
+सीजीपीए कैलकुलेशन गलत है	Academics	High
+बैकलॉग क्लियर करना मुश्किल है	Academics	High
+रीएग्जाम की तारीख क्लैश करती है	Academics	High
+सप्लीमेंटरी एग्जाम देर से होते हैं	Academics	High
+इम्प्रूवमेंट एग्जाम नहीं होते	Academics	Medium
+ग्रेस मार्क्स नहीं मिलते	Academics	Medium
+अटेंडेंस कंडोन नहीं होता	Academics	High
+मेडिकल सर्टिफिकेट मान्य नहीं होता	Administration	High
+কাজ খুব ধীরে হয়	Administration	Low
+ফ্যান কাজ করছে না	Infrastructure	High
+শিক্ষক পাওয়া যাচ্ছে না	Academics	Medium
+ইন্টারনেট কাজ করছে না	Infrastructure	Low
+অফিস তাড়াতাড়ি বন্ধ হয়	Administration	Low
+ফোন স্ক্রিন হ্যাং হয়ে আছে	Hardware	High
+অ্যাপ ইন্সটল হচ্ছে না	Software	Medium
+কীবোর্ডের স্পেসবার কাজ করছে না	Hardware	Low
+মাউসের চাকা ভেঙে গেছে	Hardware	Low
+এসএসডি আপগ্রেড করা দরকার	Hardware	Medium
+র‍্যাম কাজ করছে না	Hardware	High
+গ্রাফিক্স কার্ড অতিরিক্ত গরম হচ্ছে	Hardware	High
+পাওয়ার কেবল পাওয়া যাচ্ছে না	Hardware	Medium
+ব্যাটারির চার্জ খুব দ্রুত শেষ হচ্ছে	Hardware	Medium
+ইউএসবি ড্রাইভ রিড করছে না	Hardware	Medium
+সিডি/ডিভিডি ড্রাইভ আটকে আছে	Hardware	Low
+স্পিকারের সাউন্ড খুব কম	Hardware	Low
+বায়োমেট্রিক স্ক্যানার ফেইল করেছে	Hardware	High
+এইচআর পোর্টালে লগইন করা যাচ্ছে না	Software	High
+ছুটির অনুমোদন পেন্ডিং আছে	Administration	Low
+মেডিকেল ক্লেইম বাতিল হয়েছে	Administration	High
+অফিসের চেয়ার ভেঙে গেছে	Facilities	Low
+সার্ভার রুমে এসি কাজ করছে না	Infrastructure	High
+বায়োমেট্রিক হাজিরা রেকর্ড হয়নি	Administration	Medium
+আইডি কার্ড অ্যাক্সেস ডিনাইড	Software	High
+অফিসের ডেস্কের চাবি হারিয়ে গেছে	Facilities	Medium
+একটি সেকেন্ডারি মনিটর দরকার	Hardware	Low
+জুম অডিওতে ইকো হচ্ছে	Software	Medium
+টিমস চ্যাট আপডেট হচ্ছে না	Software	Medium
+স্ল্যাক ওয়ার্কস্পেসে ঢোকা যাচ্ছে না	Software	High
+গুগল মিট লিংক কাজ করছে না	Software	High
+ইমেইল ইনবক্স ফুল হয়ে গেছে	Software	Medium
+ইমেইল ফরোয়ার্ডিং রুল কাজ করছে না	Software	Low
+ইমেইলে সিগনেচার দেখাচ্ছে না	Software	Low
+ফিশিং ইমেইল রিপোর্ট করা হয়েছে	Security	High
+ডেটা ব্রিচ সন্দেহ করা হচ্ছে	Security	High
+গেস্ট ওয়াইফাই পাসওয়ার্ড দরকার	Network	Low
+ব্যান্ডউইথ লিমিট শেষ হয়ে গেছে	Network	Medium
+ডিএনএস কাজ করছে না	Network	High
+রাউটারের ফার্মওয়্যার আপডেট দরকার	Network	Medium
+এডব্লিউএস কনসোল লক হয়ে গেছে	Software	High
+অ্যাজিউর ভিএম স্টার্ট হচ্ছে না	Software	High
+জিসিপি প্রজেক্ট কোটা শেষ	Software	Medium
+ডকার কন্টেইনার ক্র্যাশ করেছে	Infrastructure	High
+কুবারনেটিস পড ফেইল করছে	Infrastructure	High
+পাইপলাইন ডেপ্লয়মেন্ট ফেইল হয়েছে	Infrastructure	High
+এসএসএল হ্যান্ডশেক ফেইল হয়েছে	Security	High
+টু-স্টেপ ভেরিফিকেশন কোড আসছে না	Security	High
+অথেনটিকেটর অ্যাপ হারিয়ে গেছে	Security	High
+টেম্পোরারি পাসওয়ার্ড এক্সপায়ার হয়েছে	Software	Medium
+অ্যাডমিন রাইটস চাওয়া হয়েছে	Software	Medium
+ভিউ-অনলি অ্যাক্সেস দেওয়া হয়েছে	Software	Low
+লাইসেন্স অ্যাক্টিভেশন ফেইল হয়েছে	Software	High
+সাবস্ক্রিপশন অটো-রিনিউয়াল ফেইল হয়েছে	Finance	High
+ক্রেডিট কার্ড ডিক্লাইন হয়েছে	Finance	High
+ইনভয়েসে বেশি টাকা ধরা হয়েছে	Finance	Medium
+কাস্টমার মত পরিবর্তন করেছেন	General	Low
+ভুল প্রোডাক্ট পাঠানো হয়েছে	General	High
+বক্সে কিছু পার্টস নেই	General	Medium
+ট্রানজিটের সময় ড্যামেজ হয়েছে	General	High
+রিটার্ন শিপিং লেবেল দরকার	General	Low
+অর্ডার ট্র্যাকিং আপডেট হচ্ছে না	General	Medium
+ঠিকানা খুঁজে পাওয়া যাচ্ছে না	General	High
+প্যাকেজ ডেলিভারড দেখাচ্ছে কিন্তু পাইনি	General	High
+অ্যাপ চালুর সময় ক্র্যাশ করছে	Software	High
+লোডিং স্ক্রিনে আটকে আছে	Software	Medium
+ইউআই টেক্সট ওভারল্যাপ করছে	Software	Low
+বাটনে ক্লিক করা যাচ্ছে না	Software	High
+ছবি রেন্ডার হচ্ছে না	Software	Medium
+সব ডিভাইসে ডেটা সিঙ্ক হচ্ছে না	Software	Medium
+অফলাইন মোড কাজ করছে না	Software	Medium
+পুশ নোটিফিকেশন দেরিতে আসছে	Software	Low
+ব্যাটারি সেভার মোডে সমস্যা	Software	Low
+বায়োমেট্রিক লগইন ফেইল হয়েছে	Software	High
+ডার্ক মোডে কালার কনট্রাস্ট খারাপ	Software	Low
+অডিও সিঙ্ক হচ্ছে না	Software	Medium
+পিডিএফ এক্সপোর্ট ফেইল হয়েছে	Software	Medium
+কপি-পেস্ট করার পর ফরম্যাটিং নষ্ট হয়ে গেছে	Software	Low
+স্পেল চেক কাজ করছে না	Software	Low
+সেমিস্টার পরীক্ষার ফর্ম ফিলাপ হচ্ছে না	Examination	High
+এডমিট কার্ডে ছবির জায়গায় অন্য কিছু দেখাচ্ছে	Examination	High
+লাইব্রেরিতে দরকারি বই খুঁজে পাচ্ছি না	Academics	Medium
+রেজাল্টে ইন্টারনাল মার্কস যোগ হয়নি	Examination	High
+প্লেসমেন্ট ড্রাইভের জন্য রেজিস্ট্রেশন করতে পারছি না	Placement	High
+ল্যাবের কম্পিউটারে সফটওয়্যার ইন্সটল নেই	Academics	Medium
+প্রজেক্ট সাবমিশনের পোর্টাল কাজ করছে না	Academics	High
+অ্যাটেনডেন্স পার্সেন্টেজ ভুল দেখাচ্ছে	Administration	Medium
+স্কলারশিপের ভেরিফিকেশন এখনো পেন্ডিং	Finance	High
+কলেজ বাস সময়মতো আসছে না	Transport	Medium
+হোস্টেলের ওয়াইফাই স্পিড খুব কম	Infrastructure	Medium
+ক্যান্টিনের খাবারের মান খুব খারাপ	Facilities	High
+আইডেন্টিটি কার্ড হারিয়ে গেছে, নতুন কার্ড দরকার	Administration	Medium
+মার্কশিটে নামের বানান ভুল আছে	Examination	Medium
+ইন্টার্নশিপের সার্টিফিকেট আপলোড হচ্ছে না	Placement	Medium
+ল্যাবে ইন্টারনেটের কানেকশন নেই	Infrastructure	High
+প্রোফেসরের সাথে অ্যাপয়েন্টমেন্ট পাচ্ছি না	Academics	Low
+সেমিনার হলের এসি কাজ করছে না	Facilities	Low
+সাপ্লিমেন্টারি পরীক্ষার রুটিন দরকার	Examination	Medium
+কলেজের মেইল আইডি পাসওয়ার্ড ভুলে গেছি	Software	High
+কোর্স কারিকুলাম ডাউনলোড করা যাচ্ছে না	Academics	Low
+স্পোর্টস রুমের চাবি পাওয়া যাচ্ছে না	Facilities	Low
+টিসি (ট্রান্সফার সার্টিফিকেট) এর জন্য আবেদন করতে চাই	Administration	Medium
+ক্লাসরুমে প্রজেক্টর কাজ করছে না	Academics	Medium
+ফি জমা দেওয়ার রসিদ পাইনি	Finance	High
+হোস্টেলে জলের সমস্যা হচ্ছে	Facilities	High
+লাইব্রেরি কার্ড রিনিউ করতে হবে	Academics	Low
+অফলাইন ক্লাসের নোটিশ এখনো আসেনি	Administration	Low
+ল্যাব ম্যানুয়াল খুঁজে পাচ্ছি না	Academics	Medium
+কম্পাইলার এরর দিচ্ছে ল্যাবের পিসিতে	Academics	Medium
+গ্রেড কার্ডে সিজিপিএ ভুল ক্যালকুলেট করা হয়েছে	Examination	High
+এনওসি (NOC) সার্টিফিকেট দরকার	Administration	Medium
+ব্যাকলগ পেপারের জন্য কত টাকা দিতে হবে?	Finance	Medium
+কমন রুম খুব নোংরা হয়ে আছে	Facilities	Low
+ডিউ ক্লিয়ারেন্স সার্টিফিকেট পাচ্ছি না	Administration	High
+টিচিং অ্যাসিস্ট্যান্ট ফোন ধরছে না	Academics	Low
+সেমিস্টারের মাঝখানে টিচার চেঞ্জ হয়েছে	Academics	Medium
+প্র্যাকটিক্যাল পরীক্ষার ডেট পিছিয়ে গেছে	Examination	Medium
+কোডিং অ্যাসাইনমেন্টে বাগ আছে	Academics	Medium
+থিসিস পেপার জমা দেওয়ার লাস্ট ডেট কবে?	Academics	High
+গেস্ট লেকচারের লিংক কাজ করছে না	Academics	Medium
+ডিজিটাল লাইব্রেরি অ্যাক্সেস করতে পারছি না	Software	Medium
+ল্যাপটপ চার্জিং পয়েন্ট কাজ করছে না ক্লাসে	Infrastructure	Low
+স্টুডেন্ট ক্রেডিট কার্ডের স্ট্যাটাস কি?	Finance	High
+বনভোজনের জন্য পারমিশন দরকার	Administration	Low
+ল্যাব রিপোর্ট চেক করা হয়নি এখনো	Academics	Low
+ভেকটিমাইজেশন বা র‍্যাগিং এর অভিযোগ জানাতে চাই	Security	High
+কালকে কি কলেজ ছুটি?	General	Low
+পার্কিং লটে জায়গা পাওয়া যাচ্ছে না	Transport	Low
+হোস্টেলের কার্ফু টাইম বাড়াতে হবে	Facilities	Medium
+এনভায়রনমেন্টাল স্টাডিজের প্রজেক্ট টপিক কি?	Academics	Low
+মাইগ্রেশন সার্টিফিকেট কত দিনে পাব?	Administration	Medium
+স্কলারশিপের টাকা ব্যাংকে ক্রেডিট হয়নি	Finance	High
+ভাইভা পরীক্ষার জন্য কোন ঘরে যেতে হবে?	Examination	Medium
+প্লেসমেন্ট সেলের ফোন নাম্বার দরকার	Placement	Medium
+প্রিভিয়াস ইয়ার কোশ্চেন পেপার কোথায় পাব?	Academics	Medium
+স্টুডেন্ট পোর্টাল বারবার ক্র্যাশ করছে	Software	High
+ল্যাবের ইনস্ট্রুমেন্ট কাজ করছে না	Academics	Medium
+রেজাল্টে 'অ্যাবসেন্ট' দেখাচ্ছে কিন্তু আমি পরীক্ষা দিয়েছি	Examination	High
+ফি স্ট্রাকচার হঠাৎ বদলে গেছে	Finance	High
+বোনাস মার্কস কেন দেওয়া হয়নি?	Examination	Medium
+সেমিনার রেজিস্ট্রেশন ফুল হয়ে গেছে	Academics	Low
+ল্যাবের জন্য আলাদা ড্রেস কোড আছে কি?	Administration	Low
+প্রোজেক্ট পার্টনার খুঁজে পাচ্ছি না	Academics	Low
+ইন্টার্নশিপের জন্য এনওসি দরকার	Placement	Medium
+ওয়েবসাইটে নোটিফিকেশন আপডেট হচ্ছে না	Software	Medium
+কলেজের ওয়াইফাই পাসওয়ার্ড কাজ করছে না	Network	Medium
+হোস্টেলে খাবারের মেনু পরিবর্তন করতে হবে	Facilities	Low
+স্কিল ডেভেলপমেন্ট কোর্সের ফিজ কত?	Finance	Low
+ল্যাবে কেমিক্যাল শেষ হয়ে গেছে	Academics	Medium
+প্রজেক্ট প্রেজেন্টেশনের জন্য পেনড্রাইভ নিচ্ছে না	Academics	Medium
+আইডি কার্ডের চিপ কাজ করছে না	Administration	High
+লাইব্রেরিতে বসার জায়গা নেই	Facilities	Low
+জিম মেম্বারশিপের জন্য কোথায় কথা বলব?	Facilities	Low
+ল্যাবের রেকর্ড বুক হারিয়ে গেছে	Academics	High
+হোস্টেল ফিতে অতিরিক্ত চার্জ যোগ করা হয়েছে	Finance	Medium
+সেমিস্টার ড্রপ আউট করতে চাই	Administration	High
+রি-ইভালুয়েশনের জন্য কত টাকা লাগবে?	Finance	Medium
+কলেজের ক্যান্টিনে অনলাইন পেমেন্ট নিচ্ছে না	Finance	Medium
+ল্যাবের কম্পিউটার খুব স্লো	Infrastructure	Medium
+কালকের ক্লাসের টাইম টেবিল চেঞ্জ হয়েছে কি?	Academics	Low
+ক্লাসরুমে ফ্যান ঘুরছে না	Facilities	Low
+প্লেসমেন্ট ইন্টারভিউয়ের ড্রেস কোড কি?	Placement	Medium
+কোডিং টেস্টের লিংক ওপেন হচ্ছে না	Placement	High
+রিজ্যুমে বিল্ডার সফটওয়্যার কাজ করছে না	Placement	Medium
+টেকনিক্যাল রাউন্ডে কি কি প্রশ্ন আসতে পারে?	Placement	Low
+এটিটিউড টেস্টের সিলেবাস কি?	Placement	Low
+গ্রুপ ডিসকাশনের জন্য টপিক দরকার	Placement	Low
+হোস্টেলের গেট বন্ধ করার সময় কত?	Facilities	Medium
+স্টুডেন্ট কার্ডে টাকা রিচার্জ হচ্ছে না	Finance	Medium
+সেমিস্টারের বই এখনো দোকানে আসেনি	Academics	Medium
+রেজাল্ট রিভিউ করার অপশন কোথায়?	Examination	Medium
+অ্যাটেনডেন্স কম থাকার জন্য ফাইন দিতে হচ্ছে	Finance	High
+কলেজের অ্যাপ আপডেট হচ্ছে না	Software	Medium
+প্রজেক্টের হার্ডকপি কোথায় জমা দেব?	Academics	Medium
+হোস্টেলে নতুন মেট দরকার	Facilities	Low
+ল্যাবে এসি থেকে জল পড়ছে	Facilities	Medium
+অফ-ক্যাম্পাস প্লেসমেন্টের জন্য হেল্প দরকার	Placement	Medium
+কনভোকেশন ফর্ম কিভাবে ফিলাপ করব?	Administration	Low
+ইআরপি পোর্টালে ডাটা দেখাচ্ছে না	Software	High
+কলেজের মেইন গেট বন্ধ কেন?	General	Medium
+ফেস্টের পাসের জন্য কোথায় যোগাযোগ করব?	Extracurricular	Medium
+টেক ফেস্টের রেজিস্ট্রেশন লিংক কাজ করছে না	Extracurricular	High
+কালচারাল ক্লাবের অডিশন কবে হবে?	Extracurricular	Low
+কলেজের বাসে খুব ভিড় হচ্ছে, সিট পাচ্ছি না	Transport	Medium
+বাস পাসের মেয়াদ শেষ হয়ে গেছে	Transport	Medium
+অ্যালামনাই মিটের ইনভাইটেশন পাইনি	Extracurricular	Medium
+সমাবর্তনের গাউন সাইজ ফিট হচ্ছে না	Extracurricular	Low
+ডিগ্রির অরিজিনাল সার্টিফিকেট কবে পাব?	Administration	High
+ক্যারেক্টার সার্টিফিকেটের জন্য অ্যাপ্লিকেশন দিয়েছি	Administration	Medium
+বোনাফাইড সার্টিফিকেট আজই দরকার	Administration	High
+এডুকেশন লোনের জন্য কলেজের স্ট্যাম্প লাগবে	Finance	High
+সেমিস্টার ফি দুবার কেটে নিয়েছে	Finance	High
+লেট ফাইন মকুব করার জন্য কার কাছে যাব?	Finance	Medium
+রিফান্ড পলিসি কোথায় লেখা আছে?	Finance	Low
+ক্যান্টিনে ইউপিআই স্ক্যানার কাজ করছে না	Facilities	Medium
+Professor skips important syllabus topics before exams	Academics	High
+Faculty completely absent from class for three weeks	Academics	High
+Lab sessions cancelled without rescheduling urgent practicals	Academics	High
+Wrong course content being taught this semester urgently needs fixing	Academics	High
+Exam syllabus not completed by professor causing students to fail	Academics	High
+Professor does not teach well and students are failing	Academics	High
+Faculty refuses to conduct practical sessions repeatedly	Academics	High
+No textbooks or study material provided for core subjects	Academics	High
+Classes are frequently cancelled without any notice given	Academics	High
+Incorrect grades submitted for entire batch by mistake	Academics	High
+Student cannot appear in exam due to wrong attendance records	Academics	High
+Course registration not working and exam date is tomorrow	Academics	High
+Assignment submission deadline changed without informing students	Academics	High
+Semester timetable clashing with compulsory attendance subjects	Academics	High
+Professor absent without replacement for two weeks	Academics	High
+Lecturer reads directly from slides without teaching anything	Academics	Medium
+Classroom projector is broken making lectures difficult	Academics	Medium
+Reference books recommended by faculty are not in library	Academics	Medium
+Assignment deadlines are unreasonably short for quality work	Academics	Medium
+No tutorial or extra sessions provided for tough subjects	Academics	Medium
+Lecture recordings not uploaded after online class	Academics	Medium
+Course schedule has too many back-to-back sessions daily	Academics	Medium
+Guest lectures and industry talks not organized this semester	Academics	Medium
+Elective subject choices are very limited this semester	Academics	Medium
+Feedback from assignments not given for over a month	Academics	Medium
+Faculty not following the academic calendar properly	Academics	Medium
+Practical exam preparation sessions are inadequate	Academics	Medium
+Classroom seating is uncomfortable during long lectures	Academics	Low
+Lecture notes formatting could be improved for clarity	Academics	Low
+No orientation session provided for new semester electives	Academics	Low
+Professors could use more interactive teaching methods	Academics	Low
+Classroom lighting is dim and causes reading eye strain	Academics	Low
+Reading list provided by professor is too long	Academics	Low
+More variety in assessment types would be helpful for students	Academics	Low
+Course structure explanation not given at start of semester	Academics	Low
+Building elevator broken students cannot access upper floors urgently	Infrastructure	High
+Exposed electrical wiring in classroom is a dangerous safety hazard	Infrastructure	High
+Roof leaking water into classrooms during rain causing damage	Infrastructure	High
+Fire extinguishers in labs are expired and non-functional emergency risk	Infrastructure	High
+Emergency exit doors blocked in academic block violating fire safety rules	Infrastructure	High
+Water supply completely cut off in academic wing for two days	Infrastructure	High
+Structural crack visible in building ceiling needs immediate inspection	Infrastructure	High
+Power outage happening daily disrupting scheduled computer lab exams	Infrastructure	High
+Campus WiFi completely down preventing online exam access	Infrastructure	High
+Network server failure causing total internet outage on campus	Infrastructure	High
+Main generator failed and backup power not available	Infrastructure	High
+Air conditioning in computer lab broken overheating machines and students	Infrastructure	Medium
+Drinking water dispenser in corridor needs immediate repair	Infrastructure	Medium
+Parking area lighting is insufficient creating dark and unsafe zones	Infrastructure	Medium
+Campus road has large potholes causing vehicle damage	Infrastructure	Medium
+Classroom ceiling fan not working making room very hot	Infrastructure	Medium
+Whiteboard markers never replenished in classrooms by support staff	Infrastructure	Medium
+Projector in seminar hall needs urgent maintenance and repair	Infrastructure	Medium
+Common area furniture broken and potentially hazardous to students	Infrastructure	Medium
+Basketball court surface cracked and dangerous to play on	Infrastructure	Medium
+Garbage bins on campus overflowing and not being emptied	Infrastructure	Medium
+Campus road speed bumps damaged and not visible at night	Infrastructure	Medium
+Campus landscaping and garden maintenance is totally neglected	Infrastructure	Low
+Clock in main corridor shows wrong time needs adjustment	Infrastructure	Low
+Paint peeling in older classrooms looks unprofessional	Infrastructure	Low
+Notice boards on campus are outdated and not maintained	Infrastructure	Low
+Campus map signage is confusing for new students	Infrastructure	Low
+Bicycle parking area is too small for number of students	Infrastructure	Low
+Hostel drinking water contaminated causing student health issues urgent	Hostel	High
+Hostel mess serving stale expired food causing food poisoning students	Hostel	High
+No security guard at hostel gate at night very dangerous	Hostel	High
+Ragging incident reported inside hostel needs immediate authority action	Hostel	High
+Hostel bathroom drainage completely blocked overflowing onto floor	Hostel	High
+Frequent electricity tripping in hostel at night unsafe for students	Hostel	High
+Cockroach pest infestation in hostel rooms serious hygiene emergency	Hostel	High
+No medical emergency support available inside hostel at night	Hostel	High
+Hostel hot water supply completely unavailable for weeks in winter	Hostel	High
+Gas leak smell detected near hostel kitchen needs urgent check	Hostel	High
+Hostel food quality is poor and unhygienic affecting student health	Hostel	Medium
+Hostel room ceiling fan making loud noise and vibrating abnormally	Hostel	Medium
+Hostel laundry service is very unreliable delaying clothes return	Hostel	Medium
+Common room television broken and not repaired for weeks	Hostel	Medium
+Hostel mess timings inconvenient for students with late evening classes	Hostel	Medium
+WiFi signal in hostel rooms very weak cannot study online at night	Hostel	Medium
+Hostel mess menu repetitive and boring every single day	Hostel	Medium
+Room mattress torn and very uncomfortable needs urgent replacement	Hostel	Medium
+Noisy students in hostel disturbing late night study hours	Hostel	Medium
+Hostel room window latch broken minor maintenance issue	Hostel	Low
+Hostel notice board information not updated regularly	Hostel	Low
+Hostel common bathroom mirror cracked needs replacement	Hostel	Low
+Hostel corridor lights could be made brighter	Hostel	Low
+Admit card not generated for student and examination is tomorrow urgent	Administration	High
+Scholarship payment delayed by three months students in financial trouble	Administration	High
+Enrollment certificate not issued after multiple urgent official requests	Administration	High
+Fee payment portal not working and submission deadline is today	Administration	High
+Course registration not saved due to system error before exam form	Administration	High
+Migration certificate request pending for months blocking admission elsewhere	Administration	High
+No student ID card delivered two months after enrollment	Administration	High
+Incorrect grade entry by registrar office affecting student academic result	Administration	High
+Admin not responding to emergency document request needed for visa	Administration	High
+Bonafide certificate urgently needed for bank loan not issued	Administration	High
+Admin office not open during declared official working hours regularly	Administration	Medium
+Long queue at document verification counter wasting student time	Administration	Medium
+Staff at administration counter are rude and unhelpful to students	Administration	Medium
+Grievance form submission portal is down cannot file complaints	Administration	Medium
+Duplicate fee challan generated student was charged twice by system	Administration	Medium
+Verification confirmation email not sent after form submission	Administration	Medium
+Administrative circular about fee changes not communicated to students	Administration	Medium
+Admin office notice board shows completely outdated information	Administration	Low
+Application tracking portal shows no status update after submission	Administration	Low
+Office stationery counter frequently runs out of printed forms	Administration	Low
+Fee double deducted from student bank account urgent refund needed	Finance	High
+Fee refund not processed after course withdrawal for several months	Finance	High
+Scholarship amount not credited to student account this semester at all	Finance	High
+Late fee charged incorrectly when payment was submitted on time	Finance	High
+Fee receipt not generated after successful online payment completion	Finance	High
+Bank account details provided for fee transfer are completely wrong	Finance	High
+Financial aid application rejected without explanation or appeal option	Finance	High
+Student loan letter not issued blocking bank processing	Finance	High
+Fees are disproportionately high for services and facilities provided	Finance	Medium
+Fee payment deadline too short with no extension allowed	Finance	Medium
+No installment payment facility available for large fee amounts	Finance	Medium
+Mess deposit refund delayed for graduated outgoing students	Finance	Medium
+Library security deposit not refunded after all books returned	Finance	Medium
+Complete fee structure not published before enrollment decision	Finance	Medium
+Fee receipt PDF cannot be downloaded from student portal	Finance	Low
+Old fee receipts no longer accessible in online student account	Finance	Low
+Fee breakdown explanation not included on generated receipts	Finance	Low
+Student portal completely down during scheduled online examination urgent	Software	High
+Assignment submission system crashed right before deadline problem	Software	High
+Cannot login to learning management system before examination	Software	High
+Online exam portal showing critical error during scheduled test	Software	High
+Student data not syncing across college systems causing marks error	Software	High
+Library management software not processing book returns blocking fines	Software	High
+Attendance portal crashing every morning preventing proper class marking	Software	High
+Result portal hacked and showing wrong data for all students	Software	High
+Student portal displaying incorrect personal and academic details	Software	Medium
+Online grade portal does not load properly on mobile browser	Software	Medium
+College mobile application push notifications not being received	Software	Medium
+Assignment upload fails for files larger than 5 megabyte limit	Software	Medium
+Academic calendar on portal showing incorrect semester dates	Software	Medium
+Password reset link in email expired before student used it	Software	Medium
+Student portal user interface confusing and difficult to navigate	Software	Low
+Mobile application layout broken on older Android phone devices	Software	Low
+Portal session automatically logs out too quickly without warning	Software	Low
+Annual cultural festival cancelled without proper reason after preparation	Extracurricular	High
+Student club funds being misused needs immediate financial audit	Extracurricular	High
+No sports equipment available for inter-college tournament starting tomorrow	Extracurricular	High
+Student union election results disputed involving serious irregularities	Extracurricular	High
+Sports facility not available for registered students during authorized hours	Extracurricular	High
+College music band practice room locked for months without reason	Extracurricular	High
+Sports ground full of weeds and not maintained for months	Extracurricular	Medium
+Gymnasium fitness equipment broken and outdated needs replacement	Extracurricular	Medium
+Drama and theatre club has no practice space allocated this semester	Extracurricular	Medium
+Photography club has no camera or equipment provided by college	Extracurricular	Medium
+No faculty advisor assigned to student technical coding club	Extracurricular	Medium
+Student events and activities calendar not published for semester	Extracurricular	Medium
+Annual sports meet postponed repeatedly without any rescheduling	Extracurricular	Medium
+Club membership fee increased without prior notice to members	Extracurricular	Low
+Sports match results not posted on college website or notice board	Extracurricular	Low
+No trophy display case in student activity center area	Extracurricular	Low
+No campus recruitment drives organized this entire semester urgent problem	Placement	High
+Placement coordinator not responding to student emails for several weeks	Placement	High
+Final year students have absolutely zero placement opportunities available	Placement	High
+Company interview shortlist results not communicated to eligible students	Placement	High
+Eligible students not notified about urgent time-sensitive job openings	Placement	High
+Placement portal down and company registration deadline is today	Placement	High
+Offer letters not provided to placed students causing joining issues	Placement	High
+Resume building workshops not conducted before placement season starts	Placement	Medium
+Placement portal has outdated company and job opportunity listings	Placement	Medium
+Industry visits and internship tie-ups are completely inadequate	Placement	Medium
+No soft skills or communication training provided before placements	Placement	Medium
+Placement statistics published by college are misleading and inaccurate	Placement	Medium
+Aptitude and reasoning test preparation sessions not being held	Placement	Medium
+Mock interview sessions discontinued without informing final year students	Placement	Medium
+Placement office timing inconvenient during class hours for students	Placement	Low
+Job fair advance posters not displayed on campus before event	Placement	Low
+Placement cell website not updated with recent company offers	Placement	Low
+Required textbooks out of stock before exam and not reordered urgent	Library	High
+Library management system blocking book returns causing incorrect fines	Library	High
+No access to online academic journals and research papers for thesis	Library	High
+Library fine system incorrectly overcharging students serious error	Library	High
+Books for core engineering subjects completely unavailable in library	Library	High
+Library digital subscription expired blocking journal article access	Library	High
+Library seats insufficient during exam season students cannot study	Library	Medium
+Air conditioning in library not working during summer heat period	Library	Medium
+Online book renewal system broken students must come manually	Library	Medium
+Library closes too early on weekdays before students finish studying	Library	Medium
+Study rooms always fully booked impossible to reserve quiet space	Library	Medium
+Library catalogue search returning wrong and missing book results	Library	Medium
+Library has no dedicated silent zone for focused quiet study	Library	Low
+Newspaper and magazine section outdated not refreshed regularly	Library	Low
+Library inaccessible on weekends when students need it most	Library	Low
+College bus broke down midway stranding all students on road	Transport	High
+Bus driver drives recklessly at high speed endangering student lives	Transport	High
+No bus transportation available for students from outskirt residential areas	Transport	High
+Bus route changed without informing students causing them to miss class	Transport	High
+College vehicle unavailable during medical emergency on campus urgent	Transport	High
+Bus accident occurred near campus students require safety investigation	Transport	High
+College bus consistently late causing students to miss first class	Transport	Medium
+College bus always overcrowded students unable to board at stop	Transport	Medium
+Bus timing inconvenient with no late evening route for students	Transport	Medium
+Bus air conditioning not working during hot summer months	Transport	Medium
+No night shuttle service after library late study hours	Transport	Medium
+Bus route does not cover certain student residential neighborhoods	Transport	Medium
+Bus pass renewal process takes too long to complete	Transport	Low
+College bus fee increased without giving advance notice to students	Transport	Low
+Bus stop on campus has no shelter protection from rain	Transport	Low
+Lab computers completely not working day before practical examination	Hardware	High
+Computer lab total hardware failure affecting all scheduled lab work	Hardware	High
+Server hardware crash causing important data loss in department	Hardware	High
+Department printer broken urgent printouts required for submission today	Hardware	High
+Smart interactive board in classroom unresponsive blocking all presentations	Hardware	High
+Oscilloscope and lab instruments broken before electronics practical exam	Hardware	High
+Computer lab keyboards and mice severely damaged need immediate replacement	Hardware	Medium
+Headphones in language lab all broken sessions cannot run	Hardware	Medium
+Department document scanner completely out of order for submissions	Hardware	Medium
+Lab computers running extremely slow due to insufficient outdated RAM	Hardware	Medium
+Workstation display monitors have dead pixels affecting visual work	Hardware	Medium
+Charging ports in computer lab not working cannot charge devices	Hardware	Low
+Department printer runs out of ink and toner paper regularly	Hardware	Low
+Mouse scroll wheels on all lab computers worn out	Hardware	Low
+Campus WiFi completely down all morning cannot access online exam portal	Network	High
+Total campus network outage preventing online examination submission urgent	Network	High
+Students unable to submit assignment due to campus network failure today	Network	High
+Internet extremely slow preventing live video exam proctoring session	Network	High
+Campus fiber line cut affecting all internet connectivity	Network	High
+WiFi speed very slow in hostel rooms cannot attend online evening classes	Network	Medium
+Network disconnects frequently interrupting live online video classes	Network	Medium
+VPN access for academic research portal and journals not working	Network	Medium
+Network signal very poor in remote classrooms far from access point	Network	Medium
+College intranet portal down notice board completely inaccessible	Network	Medium
+WiFi signal in cafeteria area is weak and unreliable	Network	Low
+Campus network password reset process too complicated for students	Network	Low
+Internet speed throttled significantly during peak usage hours	Network	Low
+Theft reported inside college campus building immediate police action needed	Security	High
+Unauthorized unknown person found inside restricted computer lab danger	Security	High
+CCTV surveillance cameras completely broken in all college premises unsafe	Security	High
+Security personnel absent from main gate at night no campus safety	Security	High
+Physical altercation fight reported near sports complex needs action	Security	High
+Student ID card cloned and misused on campus urgent investigation needed	Security	High
+Visitors entering campus premises without any identity verification	Security	Medium
+Multiple lost item thefts reported from unmonitored college building areas	Security	Medium
+Security access logs not being maintained for restricted computer lab entry	Security	Medium
+Keypad electronic door lock broken in computer lab restricted area	Security	Medium
+Security guard not wearing proper uniform while on duty	Security	Low
+Parking security camera not covering all corner parking spots	Security	Low
+Examination hall not assigned to student before scheduled exam urgent	Examination	High
+Answer scripts returned with completely incorrect marks needs immediate recheck	Examination	High
+Student wrongly denied entry into exam hall due to portal error	Examination	High
+Question paper leaked online before the official examination date serious	Examination	High
+Results published with incorrect wrong grades for many students	Examination	High
+Revaluation request portal broken and down before submission deadline	Examination	High
+Examination seating arrangement not communicated to students in advance	Examination	Medium
+Exam timetable has clash between two compulsory required subjects	Examination	Medium
+Examination hall invigilator was completely absent during scheduled exam	Examination	Medium
+Student mark sheet missing all marks for one subject grading error	Examination	Medium
+Hall ticket download portal extremely slow and frequently crashing	Examination	Low
+Exam room hall number not clearly printed on student hall ticket	Examination	Low
+Campus medical room completely closed with no staff during emergency	Facilities	High
+First aid box in laboratory completely empty and not replenished urgent	Facilities	High
+Canteen selling expired stale food causing students health and sickness	Facilities	High
+Drinking water RO purifier in canteen broken contaminated water risk	Facilities	High
+Campus restrooms locked during all college working hours inaccessible	Facilities	High
+No fire safety equipment on ground floor of canteen building	Facilities	High
+Canteen food menu lacks any healthy nutritious options for students	Facilities	Medium
+Campus restrooms dirty and unclean and not maintained throughout day	Facilities	Medium
+Vending machines on campus always empty and never restocked regularly	Facilities	Medium
+No wheelchair ramp or accessible elevator for differently-abled students	Facilities	Medium
+Seminar hall air conditioning broken and not working during events	Facilities	Medium
+Canteen seating tables and chairs are broken and uncomfortable	Facilities	Low
+Campus ATM machine frequently out of service and unavailable	Facilities	Low
+No waste dustbin placed near main entrance area of campus	Facilities	Low
+Sexual harassment complaint not addressed by committee urgent action required	General	High
+Student facing discrimination from faculty with absolutely no redressal	General	High
+Previous official complaint submitted weeks ago has zero action taken	General	High
+Ragging happening openly in college with no action from authorities	General	High
+Mental health crisis among students not being addressed by college	General	High
+Student welfare committee has no student representative present unfair	General	Medium
+Grievance portal is down and official complaints cannot be filed	General	Medium
+No anti-ragging awareness campaign conducted during this academic year	General	Medium
+Student handbook has outdated and wrong policy information	General	Medium
+College official website not updated with current semester information	General	Low
+Student feedback forms not collected at end of semester	General	Low
+Student support helpline number not reachable when called	General	Low
